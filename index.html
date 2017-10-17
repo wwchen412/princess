@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style>
+        .hero-img {
+            background: url('img/sky.png');
+            background-size: cover;
+            height: calc(100vh - 90px);
+            width: 100%;
+            position: relative;
+        }
+        
+        .slogan {
+            transform: translateX(10px);
+        }
+        /* .ship {
+            margin-top: -50%;
+            text-align: center;
+            transform: translateY(40%);
+        } */
+        
+        .ship img {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        
+        .wave {
+            width: 100%;
+            position: absolute;
+            bottom: 120px;
+        }
+        
+        .hero-img:before {
+            content: '';
+            width: 100%;
+            height: 120px;
+            position: absolute;
+            bottom: 0;
+            background-color: #005EA1;
+            z-index: 1;
+        }
+        
+        .wave2 {
+            width: 100%;
+            position: absolute;
+            bottom: 60px;
+            z-index: 2;
+        }
+        
+        .editorial {
+            display: block;
+            width: 100%;
+            height: 10em;
+            max-height: 100vh;
+            margin: 0;
+        }
+        
+        .parallax use {
+            animation: move-forever 12s linear infinite;
+        }
+        
+        .use {
+            animation-delay: -2s;
+        }
+        
+        .wave2 .parallax use {
+            animation-delay: -2s;
+            animation-duration: 4s
+        }
+        
+        .use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 3s
+        }
+        
+        @keyframes move-forever {
+            0% {
+                transform: translate(-90px, 0%)
+            }
+            100% {
+                transform: translate(85px, 0%)
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .editorial {
+                height: 5em;
+            }
+            .ship img {
+                bottom: 70px;
+            }
+            .wave {
+                width: 100%;
+                position: absolute;
+                bottom: 100px;
+            }
+            .wave2 {
+                bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand justify-content-center d-flex p-3" style="background-color:#316EB1;">
+
+            <img src="img/logo.svg" alt="" width="200px;">
+        </div>
+        <nav class="nav  navbar-dark justify-content-center" sytle="background:#fff;">
+            <a class="nav-link active " href="#">活動辦法</a>
+            <a class="nav-link " href="#">設施介紹</a>
+            <a class="nav-link " href="#">行程簡介</a>
+            <a class="nav-link" href="#">早鳥優惠</a>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hero-img ship-bg d-md-flex  flex-wrap d-sm-block">
+                <!-- 標語 -->
+                <div class="col-md-6 col-lg-6  col-xl-4 mx-auto col-xs-12 ">
+                    <div class="slogan  pt-2">
+                        <img src="img/slogan.svg" alt="">
+                    </div>
+                </div>
+                <!-- 船 -->
+                <div class="ship">
+                    <img src="img/ship.png" alt="" class="img-fluid">
+                </div>
+                <!-- 浪 -->
+                <div class="wave">
+                    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
+                            58-10 88-10s
+                            58 10 88 10 
+                            58-10 88-10 
+                            58 10 88 10
+                            v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+                               
+                            </g>
+                        </svg>
+                </div>
+                <div class="wave2">
+                    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-100 44c30 0 
+                            70-10 88-10s
+                            70 10 88 10 
+                            70-10 88-10 
+                            70 10 88 10
+                            v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
+                               
+                            </g>
+                        </svg>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+    </script>
+</body>
+
+</html>

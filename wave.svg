@@ -1,0 +1,14 @@
+<svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 250 28" preserveAspectRatio="none">
+                                <defs>
+                                    <path id="gentle-wave" d="M-100 50c30 0 
+                                70-10 88-10s
+                                70 10 88 10 
+                                70-10 88-10 
+                                70 10 88 10
+                                v44h-352z" />
+                                </defs>
+                                <g class="parallax">
+                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#4FB0DB" />
+                                   
+                                </g>
+                            </svg>
