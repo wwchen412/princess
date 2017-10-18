@@ -20,10 +20,13 @@
             /* height: calc(100vh - 90px); */
             width: 100%;
             position: relative;
+            overflow: hidden;
         }
         
         .slogan {
+            position: relative;
             transform: translateX(10px);
+            z-index: 1;
         }
         
         .ship {
@@ -76,7 +79,8 @@
         
         .cloud4 {
             top: 40%;
-            animation: cloud 22s -3s infinite linear;
+            z-index: 2;
+            animation: cloud 22s -13s infinite linear;
         }
         
         .cloud5 {
@@ -86,6 +90,7 @@
         
         .cloud6 {
             top: 38%;
+            z-index: 2;
             animation: cloud 20s -10s infinite linear;
         }
         
@@ -187,10 +192,9 @@
         .book-now a:hover {
             filter: drop-shadow(0px 0px 15px rgba(255, 233, 255, .6));
         }
-        
-        .book-now img {
+        /* .book-now img {
             width: 130px;
-        }
+        } */
         
         @keyframes move-forever {
             0% {
@@ -251,6 +255,24 @@
                 bottom: 10px;
                 left: 0;
             }
+            .book-now {
+                position: absolute;
+                right: 5px;
+                bottom: 0px;
+                z-index: 5;
+            }
+            .book-now img {
+                width: 80px;
+            }
+            .book-now:before {
+                content: '';
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: -100%;
+                border-bottom: 2px dashed #fff;
+                top: 55%;
+            }
         }
         
         .big-title {
@@ -261,6 +283,18 @@
         .section3 {
             background: #005EA1;
             padding-bottom: 100px;
+        }
+        
+        .select-share {
+            padding: 0 20px;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        
+        .select-share li {
+            display: inline-block;
+            margin: 0 20px;
         }
         
         .section4 {
@@ -386,9 +420,9 @@
                     </div>
                     <!-- 刷卡 -->
                     <div class="book-now">
-                        <a href="" class="text-light">
-                            <img src="img/credit-card.png" alt="" class="mb-2"><br> 立即預約公主
-                        </a>
+                        <div class="text-light">
+                            <img src="img/credit-card.png" alt="" class="mb-2 img-fluid"><br> 立即預約公主
+                        </div>
                     </div>
 
                 </div>
@@ -403,30 +437,30 @@
         <div class="container-fluid">
             <div class="row">
                 <div class=" col-12 href-slider py-1 pb-5" style="background:#00b2e0;">
-                    <ul class="list-unstyled text-white d-none justify-content-around">
+                    <ul class="list-unstyled text-white d-none  select-share text-center">
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">蓮花水療</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">海上天空步道</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">舵手酒吧</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">聲光水影秀</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">吟唱者酒吧</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">星空露天電影院</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">公主劇院</a>
                         </li>
                         <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block">123</a>
+                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">海上豪華ktv</a>
                         </li>
                     </ul>
                 </div>
@@ -519,6 +553,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script>
+        $(function() {
+            $('.book-now').click(function() {
+                $('.select-share').removeClass('d-none').addClass('d-block');
+            })
+        })
     </script>
 </body>
 
