@@ -128,7 +128,7 @@
         .wave2 {
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             z-index: 4;
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
         }
@@ -209,6 +209,12 @@
             }
         }
         
+        @media screen and (max-width:1090px) {
+            .navbar {
+                padding: 0;
+            }
+        }
+        
         @media screen and (max-width:768px) {
             h2 {
                 font-size: 1.5rem;
@@ -221,9 +227,6 @@
             }
             .hero-img:before {
                 height: 95px;
-            }
-            .navbar {
-                padding: 0;
             }
             .navbar-toggler {
                 position: absolute;
