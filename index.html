@@ -8,8 +8,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/swiper.min.css">
     <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
+        }
+        
         .text-main {
             color: #005EA1;
         }
@@ -205,13 +209,13 @@
             }
         }
         
-        @media screen and (max-width:767px) {
-            .hero-img {
-                /* height: calc(100vh - 50px); */
-            }
-        }
-        
         @media screen and (max-width:768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+            h4 {
+                font-size: 1.2rem;
+            }
             .wave {
                 bottom: 95px;
             }
@@ -275,6 +279,10 @@
             }
         }
         
+        .swiper-container {
+            padding: 0 30px;
+        }
+        
         .big-title {
             padding-top: 50px;
             letter-spacing: 5px;
@@ -286,15 +294,13 @@
         }
         
         .select-share {
-            padding: 0 20px;
             white-space: nowrap;
-            overflow-x: scroll;
-            overflow-y: hidden;
         }
         
-        .select-share li {
+        .select-share>div {
             display: inline-block;
-            margin: 0 20px;
+            white-space: normal;
+            vertical-align: top;
         }
         
         .section4 {
@@ -312,6 +318,11 @@
         .icon {
             display: inline-block;
             width: 50px;
+        }
+        /* modal */
+        
+        .modal-content {
+            border: 0;
         }
     </style>
 </head>
@@ -436,35 +447,43 @@
     <section class="section2">
         <div class="container-fluid">
             <div class="row">
-                <div class=" col-12 href-slider py-1 pb-5" style="background:#00b2e0;">
-                    <ul class="list-unstyled text-white d-none  select-share text-center">
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">蓮花水療</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">海上天空步道</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">舵手酒吧</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">聲光水影秀</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">吟唱者酒吧</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">星空露天電影院</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">公主劇院</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="" class="text-light"><img src="img/href.png" alt="" class="d-block mx-auto">海上豪華ktv</a>
-                        </li>
-                    </ul>
+                <div class=" col-12 href-slider  pb-5" style="background:#00b2e0;">
+
+                    <div class="swiper-container">
+                        <div class="list-unstyled text-white d-none  select-share text-center swiper-wrapper">
+                            <div class="text-center swiper-slide">
+                                <a href="#1" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">蓮花水療</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">海上天空步道</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">舵手酒吧</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">聲光水影秀</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">吟唱者酒吧</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">星空露天電影院</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">公主劇院</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong"><img src="img/href.png" alt="" class="d-block mx-auto">海上豪華ktv</a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev swiper-button-disabled"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
     <!-- 標語 -->
@@ -495,7 +514,7 @@
             </div>
         </div>
     </section>
-    <section class="section4 py-5">
+    <section class="section4 py-3">
         <div class="white-wave"><img src="img/white-wave.svg" alt=""></div>
         <div class="container">
             <!--  活動一 -->
@@ -544,15 +563,69 @@
 
     <footer>
         <div class="copyrigth">
-            <h6 class="text-center text-light p-2 m-0" style="background:#005EA1;">Copyright © 2016+ Carnival PLC, Taiwan Branch. All Rights Reserved.</h6>
+            <p class="text-center text-light p-2 m-0" style="background:#005EA1;">Copyright © 2016+ Carnival PLC, Taiwan Branch. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  bg-primary text-light">
+                    <h5 class="modal-title " id="exampleModalLongTitle">海上天空步道</h5>
+                    <button type="button" class="close bg-light rounded-circle" data-dismiss="modal" aria-label="Close" style="width:1.2rem;height:1.2rem;line-height:1.2rem;"> 
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/walk.png" alt="" class="img-fluid rounded">
+                    <p style="line-height:200%;font-size:.8rem;">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
+                        <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
+                    </p>
+                </div>
+
+
+                <button type="button" class="btn btn-primary mx-auto mb-2"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
+
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
     <script>
+        $(document).ready(function() {
+
+            var swiper = new Swiper('.swiper-container', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                slidesPerView: 8,
+                spaceBetween: 0,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 8,
+
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 40
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    320: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            });
+        });
         $(function() {
             $('.book-now').click(function() {
                 $('.select-share').removeClass('d-none').addClass('d-block');
