@@ -93,7 +93,8 @@
             FB.api('/me', function(response) {
                 console.log('Successful login for: ' + response.name);
                 document.querySelector('.form-area').classList.remove("d-none");
-                document.querySelector('.fb-loginbtn').classList.add('d-none');
+                document.querySelector('.block').classList.add('d-none');
+                document.querySelector('#validationCustom01').value = response.name;
             });
         }
     </script>
@@ -139,7 +140,7 @@
                     </div>
 
                     <button class="btn btn-primary mx-auto d-block px-5" type="submit">送出並打卡</button>
-                    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
                 </form>
 
             </div>
