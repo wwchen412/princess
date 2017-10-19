@@ -14,21 +14,22 @@
  " />
     <meta property="og:image" content="img/ship.png" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/swiper.min.css">
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
         }
-        
+
         a {
             text-decoration: none !important;
         }
-        
+
         .text-main {
             color: #005EA1;
         }
-        
+
         .hero-img {
             background: url('img/sky.png');
             background-size: cover;
@@ -37,13 +38,13 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .slogan {
             position: relative;
             transform: translateX(10px);
             z-index: 1;
         }
-        
+
         .ship {
             margin-top: -10%;
             text-align: center;
@@ -52,7 +53,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         @keyframes ship {
             0% {
                 transform: translateY(10px)
@@ -61,57 +62,57 @@
                 transform: translateY(0px)
             }
         }
-        
+
         .cloud {
             position: absolute;
             left: 0vw;
             z-index: 0;
         }
-        
+
         .cloud img {
             width: 200px;
         }
-        
+
         .cloud2 img {
             width: 250px;
         }
-        
+
         .cloud3 img {
             width: 300px;
         }
-        
+
         .cloud1 {
             top: 30%;
             animation: cloud 35s infinite linear;
         }
-        
+
         .cloud2 {
             top: 60px;
             animation: cloud 40s -3s infinite linear;
         }
-        
+
         .cloud3 {
             top: 50%;
             animation: cloud 44s -5s infinite linear;
         }
-        
+
         .cloud4 {
             top: 40%;
             z-index: 2;
             animation: cloud 42s -13s infinite linear;
         }
-        
+
         .cloud5 {
             top: 52%;
             animation: cloud 47s -7.5s infinite linear;
         }
-        
+
         .cloud6 {
             top: 38%;
             z-index: 2;
             animation: cloud 30s -10s infinite linear;
         }
-        
+
         @keyframes cloud {
             0% {
                 transform: translateX(-20vw);
@@ -120,7 +121,7 @@
                 transform: translateX(120vw);
             }
         }
-        
+
         .wave {
             width: 100%;
             position: absolute;
@@ -128,7 +129,7 @@
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
             z-index: 2;
         }
-        
+
         .hero-img:before {
             content: '';
             width: 100%;
@@ -138,7 +139,7 @@
             background-color: #005EA1;
             z-index: 3;
         }
-        
+
         .wave2 {
             width: 100%;
             position: absolute;
@@ -146,14 +147,14 @@
             z-index: 4;
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
         }
-        
+
         .iland {
             position: absolute;
             left: 10px;
             bottom: 35px;
             z-index: 3;
         }
-        
+
         .editorial {
             display: block;
             width: 100%;
@@ -161,25 +162,25 @@
             max-height: 100vh;
             margin: 0;
         }
-        
+
         .parallax use {
             animation: move-forever 12s linear infinite;
         }
-        
+
         .use {
             animation-delay: -2s;
         }
-        
+
         .wave2 .parallax use {
             animation-delay: -2s;
             animation-duration: 4s
         }
-        
+
         .use:nth-child(3) {
             animation-delay: -4s;
             animation-duration: 3s
         }
-        
+
         .wave3 {
             width: 100%;
             position: absolute;
@@ -188,14 +189,14 @@
             pointer-events: none;
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
         }
-        
+
         .book-now {
             position: absolute;
             right: 20px;
             bottom: 70px;
             z-index: 5;
         }
-        
+
         .book-now-btn {
             position: absolute;
             left: 50%;
@@ -203,7 +204,7 @@
             bottom: 70px;
             z-index: 5;
         }
-        
+
         .book-now:before {
             content: '';
             display: block;
@@ -213,7 +214,7 @@
             border-bottom: 2px dashed #fff;
             top: 55%;
         }
-        
+
         .book-now img:hover,
         .book-now a:hover {
             filter: drop-shadow(0px 0px 15px rgba(255, 233, 255, .6));
@@ -221,7 +222,7 @@
         /* .book-now img {
             width: 130px;
         } */
-        
+
         @keyframes move-forever {
             0% {
                 transform: translate(-90px, 0%)
@@ -230,13 +231,13 @@
                 transform: translate(85px, 0%)
             }
         }
-        
+
         @media screen and (max-width:1090px) {
             .navbar {
                 padding: 0;
             }
         }
-        
+
         @media screen and (max-width:768px) {
             .cloud2 {
                 top: 60px;
@@ -287,7 +288,7 @@
                 top: -80px;
             }
         }
-        
+
         @media screen and (max-width:576px) {
             .ship {
                 margin-top: -30%;
@@ -325,35 +326,35 @@
                 top: 55%;
             }
         }
-        
+
         .swiper-container {
             padding: 0 30px;
         }
-        
+
         .big-title {
             padding-top: 50px;
             letter-spacing: 5px;
         }
-        
+
         .section3 {
             background: #005EA1;
             padding-bottom: 100px;
         }
-        
+
         .select-share {
             white-space: nowrap;
         }
-        
+
         .select-share>div {
             display: inline-block;
             white-space: normal;
             vertical-align: top;
         }
-        
+
         .section4 {
             position: relative;
         }
-        
+
         .white-wave {
             position: absolute;
             top: -40px;
@@ -361,27 +362,35 @@
             width: 100%;
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
         }
-        
+
         .icon {
             display: inline-block;
             width: 50px;
         }
         /* modal */
-        
+
         .modal-content {
             border: 0;
         }
-        
+
         .hoverChange img:nth-child(2) {
             display: none;
         }
-        
+
         .hoverChange:hover img:nth-child(2) {
             display: block;
         }
-        
+
         .hoverChange:hover img:nth-child(1) {
             display: none !important;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            .hero-img {
+                display: block !important;
+            }
+          
         }
     </style>
     <!--[if IE]>
@@ -398,7 +407,8 @@
         <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
 
             <img src="img/logo.svg" alt="" width="200px;">
-            <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
         </div>
@@ -443,36 +453,38 @@
                     </div>
                     <!-- 浪 -->
                     <div class="wave">
-                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                                <defs>
-                                        <path id="gentle-wave" d="M-150 44c30 0 
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
                                         58-10 88-10s
                                         58 10 88 10 
                                         58-10 88-10 
                                         58 10 88 10
                                         v44h-352z" />
-                                </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
-                                   
-                                </g>
-                            </svg>
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
+                        </svg>
                     </div>
                     <div class="wave2">
-                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                                <defs>
-                                        <path id="gentle-wave" d="M-150 44c30 0 
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
                                         58-10 88-10s
                                         58 10 88 10 
                                         58-10 88-10 
                                         58 10 88 10
                                         v44h-352z" />
-                                </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
-                                   
-                                </g>
-                            </svg>
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
+
+                            </g>
+                        </svg>
                     </div>
                     <!-- 島 -->
                     <div class="iland">
@@ -575,20 +587,21 @@
             <div class="row">
                 <div class="col-12 py-3">
                     <div class="wave3">
-                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                                <defs>
-                                    <path id="gentle-wave" d="M-150 44c30 0 
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+                            preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
                                 58-10 88-10s
                                 58 10 88 10 
                                 58-10 88-10 
                                 58 10 88 10
                                 v44h-352z" />
-                                </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
-                                   
-                                </g>
-                            </svg>
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
+                        </svg>
                     </div>
                     <h2 class="text-light text-center big-title">是你，讓我感到輕鬆奢華</h2>
                     <h4 class="text-light text-center py-2" style="line-height:200%;">慶祝盛世公主號首次來台航行旅遊<br> 我們將舉辦一系列活動邀您一同共襄盛舉，來體會盛世公主，遊你夢想的最佳
@@ -721,14 +734,19 @@
     <!-- Optional JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <!-- 讀取modal 內容 -->
     <script>
-        $('#exampleModalLong').on('show.bs.modal', function(event) {
+        $('#exampleModalLong').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var modal_title = button.data('title');
             var modal_p = button.data('p');
@@ -742,10 +760,9 @@
 
         })
     </script>
-    <!-- jQuery JS 3.1.0 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var swiper = new Swiper('.swiper-container', {
                 nextButton: '.swiper-button-next',
@@ -773,8 +790,8 @@
                 }
             });
         });
-        $(function() {
-            $('.book-now-js').click(function() {
+        $(function () {
+            $('.book-now-js').click(function () {
                 $('.select-share').removeClass('d-none').addClass('d-block');
                 $('html, body').animate({
                     scrollTop: $("#navtoggle").offset().top - 100
