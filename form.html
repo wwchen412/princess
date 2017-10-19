@@ -29,7 +29,7 @@
 
 <body>
     <script>
-        // This is called with the results from from FB.getLoginStatus().
+        // 檢查登入狀態
         function statusChangeCallback(response) {
             console.log('statusChangeCallback');
             console.log(response);
@@ -84,13 +84,14 @@
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function(response) {
                 console.log('Successful login for: ' + response.name);
-                document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
+                document.querySelector('.form-area').classList.remove("d-none");
+                document.querySelector('fb:login-button').classList.add('d-none');
             });
         }
     </script>
-
-    <div class="form-area rounded border">
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+    <div class="form-area rounded border d-none">
         <div class="container">
             <div class="row">
                 <form class="container" id="needs-validation" novalidate>
@@ -124,8 +125,7 @@
                         </div>
 
                     </div>
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                    </fb:login-button>
+
                     <button class="btn btn-primary mx-auto d-block px-5" type="submit">送出並打卡</button>
                     <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
                 </form>
