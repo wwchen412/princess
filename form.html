@@ -24,6 +24,14 @@
             align-self: center;
             margin: 0 15px;
         }
+        
+        .block {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            align-self: center;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -71,7 +79,7 @@
             }
             js = d.createElement(s);
             js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
+            js.src = "//connect.facebook.net/zh_TW/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
@@ -88,10 +96,13 @@
                 document.querySelector('.fb-loginbtn').classList.add('d-none');
             });
         }
-        checkLoginState();
     </script>
-    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-loginbtn">
-    </fb:login-button> -->
+    <div class="block rounded">
+        <h3 class="mb-3">登入後繼續參加活動</h3>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-loginbtn mx-auto">請先登入並繼續
+        </fb:login-button>
+    </div>
+
     <div class="form-area rounded border d-none">
         <div class="container">
             <div class="row">
