@@ -417,8 +417,14 @@
             js = d.createElement(s);
             js.id = id;
             js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
+
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+        // FB.ui({
+        //     method: 'share',
+        //     href: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse',
+        //     hashtag: '#321',
+        // }, function(response) {});
     </script>
     <header>
         <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
@@ -719,8 +725,8 @@
                     </p>
                 </div>
 
-                <div class="fb-share-button mx-auto mb-2 px-5" data-href="https://wwchen412.github.io/princess/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse">分享</a></div>
-                <!-- <a href="form.html" class="btn btn-primary mx-auto mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</a> -->
+                <!-- <div class="fb-share-button mx-auto mb-2 px-5" data-href="https://wwchen412.github.io/princess/" data-hashtag="#123" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse">分享</a></div> -->
+                <button id="shareBtn" class="btn btn-primary mx-auto mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
 
             </div>
         </div>
@@ -740,7 +746,16 @@
             $('#exampleModalLong').modal('show');
         });
     </script>
-
+    <script>
+        document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;',
+                hashtag: '#盛世公主',
+            }, function(response) {});
+        }
+    </script>
     <script>
         $(document).ready(function() {
 
