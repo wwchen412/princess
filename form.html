@@ -94,9 +94,11 @@
                 console.log('Successful login for: ' + response.name);
                 document.querySelector('.form-area').classList.remove("d-none");
                 document.querySelector('.block').classList.add('d-none');
-                document.querySelector('#validationCustom01').value = response.name;
-                document.querySelector('#validationCustom03').value = response.tel;
-                document.querySelector('#validationCustom04').value = response.email;
+
+
+                if (response.email != '' | undefined) {
+                    document.querySelector('#validationCustom01').value = response.name;
+                }
             });
         }
     </script>
