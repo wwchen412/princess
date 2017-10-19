@@ -60,9 +60,7 @@
         
         .cloud {
             position: absolute;
-            left: -20vw;
-            top: 30%;
-            animation: cloud 15s infinite linear;
+            left: 0vw;
             z-index: 0;
         }
         
@@ -78,25 +76,30 @@
             width: 300px;
         }
         
+        .cloud1 {
+            top: 30%;
+            animation: cloud 35s infinite linear;
+        }
+        
         .cloud2 {
             top: 60px;
-            animation: cloud 20s -3s infinite linear;
+            animation: cloud 40s -3s infinite linear;
         }
         
         .cloud3 {
             top: 50%;
-            animation: cloud 24s -5s infinite linear;
+            animation: cloud 44s -5s infinite linear;
         }
         
         .cloud4 {
             top: 40%;
             z-index: 2;
-            animation: cloud 22s -13s infinite linear;
+            animation: cloud 42s -13s infinite linear;
         }
         
         .cloud5 {
             top: 52%;
-            animation: cloud 17s -7.5s infinite linear;
+            animation: cloud 47s -7.5s infinite linear;
         }
         
         .cloud6 {
@@ -223,6 +226,28 @@
         }
         
         @media screen and (max-width:768px) {
+            .cloud2 {
+                top: 60px;
+                animation: cloud 20s -3s infinite linear;
+            }
+            .cloud3 {
+                top: 50%;
+                animation: cloud 24s -5s infinite linear;
+            }
+            .cloud4 {
+                top: 40%;
+                z-index: 2;
+                animation: cloud 22s -13s infinite linear;
+            }
+            .cloud5 {
+                top: 52%;
+                animation: cloud 17s -7.5s infinite linear;
+            }
+            .cloud6 {
+                top: 38%;
+                z-index: 2;
+                animation: cloud 20s -10s infinite linear;
+            }
             h2 {
                 font-size: 1.5rem;
             }
@@ -470,7 +495,7 @@
                     </div>
                     <div class="w-100"></div>
                     <!-- 船 -->
-                    <div class="ship col-lg-6 mx-auto">
+                    <div class="ship col-lg-8 mx-auto">
                         <img src="img/ship.png" alt="" class="img-fluid">
                     </div>
                     <!-- 浪 -->
