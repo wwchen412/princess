@@ -85,12 +85,13 @@
             FB.api('/me', function(response) {
                 console.log('Successful login for: ' + response.name);
                 document.querySelector('.form-area').classList.remove("d-none");
-                document.querySelector('fb:login-button').classList.add('d-none');
+                document.querySelector('.fb-loginbtn').classList.add('d-none');
             });
         }
+        checkLoginState();
     </script>
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-loginbtn">
+    </fb:login-button> -->
     <div class="form-area rounded border d-none">
         <div class="container">
             <div class="row">
