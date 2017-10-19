@@ -93,14 +93,15 @@
             FB.api('/me', function(response) {
                 document.querySelector('.form-area').classList.remove("d-none");
                 document.querySelector('.block').classList.add('d-none');
+                document.querySelector('#validationCustom01').value = response.name;
 
 
             });
             FB.api('/me', {
                 fields: 'name,email'
             }, function(response) {
-                console.log('Good to see you, ' + response.email + '.');
-                document.querySelector('#validationCustom01').value = response.name;
+
+                document.querySelector('#validationCustom04').value = response.email;
             });
         }
     </script>
