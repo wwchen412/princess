@@ -91,14 +91,16 @@
         function testAPI() {
             console.log('Welcome!  Fetching your information.... ');
             FB.api('/me', function(response) {
-                console.log('Successful login for: ' + response.email);
                 document.querySelector('.form-area').classList.remove("d-none");
                 document.querySelector('.block').classList.add('d-none');
-                document.querySelector('#validationCustom01').value = response.name;
 
-                if (response.email != '' | undefined) {
-                    document.querySelector('#validationCustom04').value = response.email;
-                }
+
+            });
+            FB.api('/me', {
+                fields: 'name,email'
+            }, function(response) {
+                console.log('Good to see you, ' + response.email + '.');
+                document.querySelector('#validationCustom01').value = response.name;
             });
         }
     </script>
