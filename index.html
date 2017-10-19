@@ -371,6 +371,18 @@
         .modal-content {
             border: 0;
         }
+        
+        .hoverChange img:nth-child(2) {
+            display: none;
+        }
+        
+        .hoverChange:hover img:nth-child(2) {
+            display: block;
+        }
+        
+        .hoverChange:hover img:nth-child(1) {
+            display: none !important;
+        }
     </style>
     <!--[if IE]>
         <style>
@@ -508,40 +520,43 @@
                     <div class="swiper-container">
                         <div class="list-unstyled text-white d-none  select-share text-center swiper-wrapper">
                             <div class="text-center swiper-slide">
-                                <a href="#1" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
+                                <a href="#1" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">海上天空步道</a>
+                                " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic1.png" class="mx-auto" alt=""> 海上天空步道
+                                </a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="聲光水影秀" data-p="每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">聲光水影秀</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="聲光水影秀" data-p="每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"><img src="img/hoverpic1.png" class="mx-auto" alt="">聲光水影秀</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">星空露天電影院</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">星空露天電影院</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">豪華免稅購物</a>
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">豪華免稅購物</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">米其林水準佳餚</a>
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">米其林水準佳餚</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">蓮花水療</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">蓮花水療</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">公主劇院</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">公主劇院</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light" data-toggle="modal" data-target="#exampleModalLong" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto">海上豪華ktv</a>
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">海上豪華ktv</a>
                             </div>
                         </div>
                         <div class="swiper-button-prev swiper-button-disabled"></div>
@@ -611,7 +626,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6">
-                    <img src="img/active2.png" alt="" class="img-fluid">
+                    <img src="img/active1.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 text-center">
                     <a href="#navtoggle" class="btn d-inline-block mx-auto bg-primary text-light my-3 px-5  book-now-js">立即前往</a>
