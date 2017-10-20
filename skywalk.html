@@ -388,6 +388,30 @@
         .hoverChange:hover img:nth-child(1) {
             display: none !important;
         }
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            .hero-img {
+                display: block !important;
+            }
+            .swiper-slide{
+                width: calc(100% / 8);
+            }
+            .swiper-button-prev, .swiper-button-next{
+                display: none !important;
+            }
+
+            .cloud {
+               animation: none !important;
+            }
+            .cloud2{
+                 transform: translateX(50%);
+            }
+            .cloud3{
+                transform: translateX(80vw);
+            }
+        
+        
+        }
     </style>
 </head>
 
