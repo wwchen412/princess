@@ -201,6 +201,14 @@
             z-index: 5;
         }
         
+        .book-now-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 70px;
+            z-index: 5;
+        }
+        
         .book-now:before {
             content: '';
             display: block;
@@ -466,16 +474,11 @@
 
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        // FB.ui({
-        //     method: 'share',
-        //     href: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse',
-        //     hashtag: '#321',
-        // }, function(response) {});
     </script>
     <header>
         <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
 
-            <a href="index.html"><img src="img/logo.svg" alt="" width="200px;"></a>
+            <img src="img/logo.svg" alt="" width="200px;">
             <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -579,7 +582,10 @@
                             <img src="img/credit-card.png" alt="" class="mb-2 img-fluid"><br> 立即預約公主
                         </div>
                     </div>
-
+                    <!-- 打卡趣 展開 -->
+                    <button class="btn btn-warning book-now-btn book-now-js text-light">
+                    立即打卡趣
+                    </button>
                 </div>
             </div>
 
@@ -678,8 +684,11 @@
         <div class="container">
             <!--  活動一 -->
             <div class="row my-3">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-12">
                     <h3 class="text-main"><img src="img/location.svg" alt="" class="icon mr-3 mb-3">夢想公主．打卡趣 </h3>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
                     <h5> 活動期間：2017/11/01-11/15</h5>
                     <h5>活動步驟:</h5>
                     <ol>
@@ -699,9 +708,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                    </div>
+                    <img src="img/active1.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 text-center">
                     <a href="#navtoggle" class="btn d-inline-block mx-auto bg-primary text-light my-3 px-5  book-now-js">立即前往</a>
@@ -709,8 +716,11 @@
             </div>
             <!-- 活動二 -->
             <div class="row my-3 mt-5">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-12">
                     <h3 class="text-main"><img src="img/movie.svg" alt="" class="icon mr-3 mb-3">我的公主．夢想時刻 </h3>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
                     <h5>活動期間: 2017/11/17-11/30
                     </h5>
                     <h5>活動步驟:</h5>
@@ -727,9 +737,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                    </div>
+                    <img src="img/active2.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 text-center">
                     <a href="" class="btn d-inline-block mx-auto bg-secondary text-light my-3 disabled px-5">即將開始</a>
@@ -805,7 +813,13 @@
                 display: 'popup',
                 href: 'https://wwchen412.github.io/princess/skywalk.html',
                 hashtag: '#盛世公主遊你夢想',
-            }, function(response) {});
+            }, function(response) {
+                if (response && !response.error_message) {
+                    alert('Posting completed.');
+                } else {
+                    alert('Error while posting.');
+                }
+            });
         }
     </script>
     <script>
