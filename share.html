@@ -49,6 +49,7 @@
             padding: 20px;
             align-self: center;
             text-align: center;
+            position: relative;
         }
         
         @media screen and (max-width:1090px) {
@@ -56,25 +57,36 @@
                 padding: 0;
             }
         }
+        
+        @media screen and (max-width: 768px) {
+            #wrap {
+                min-height: calc(100vh - 49px);
+            }
+            .navbar-toggler {
+                position: absolute;
+                right: 10px;
+                top: 6px;
+            }
+        }
+        
         @media screen and (-ms-high-contrast: active),
         (-ms-high-contrast: none) {
-            #wrap{
-               position: relative;
-               min-height: 100vh;
-             
+            #wrap {
+                position: relative;
+                min-height: 100vh;
             }
             .block {
                 position: absolute;
-              top:50%;      
-              transform: translateY(-50%) translateX(-50%);
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
             }
-            .form-area{
+            .form-area {
                 position: absolute;
-              top:50%;    
-             width: 400px;
-              transform: translateY(-50%) translateX(-50%); 
+                top: 50%;
+                width: 400px;
+                transform: translateY(-50%) translateX(-50%);
             }
-            .ieonly-overflow{
+            .ieonly-overflow {
                 overflow: hidden;
             }
         }
@@ -197,16 +209,19 @@
     </header>
     <div id="wrap" class="ieonly-overflow">
         <div class="block rounded mx-2">
-             <h3 class="mb-3 text-primary">分享活動打卡</h3>
-             <!-- <h6>Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
+            <h3 class="mb-3 text-primary">分享活動打卡</h3>
+            <!-- <h6>Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
             <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6>
-            <hr> 
+            <hr>
             <img src="img/walk.png" alt="" class="img-fluid mb-3">
             <div class="text-left" style="font-weight:100;">
                 <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 【海上天空步道】</p>
                 <p style="font-size:.9rem;letter-spacing:1px;">高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。</p>
-            </div> 
-            <button class="btn btn-outline-secondary mb-2" onclick="goIndex()" style="opacity:.3;">重新開始</button>
+            </div>
+            <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="goIndex()"> 
+                    <span aria-hidden="true" style="">×</span>
+                  </button>
+            <!-- <button class="btn btn-outline-secondary mb-2" onclick="goIndex()" style="opacity:.3;">重新開始</button> -->
             <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
 
         </div>
