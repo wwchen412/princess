@@ -25,7 +25,13 @@
     <!-- swiper -->
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/all.js"></script>
     <style>
+        .hidden-load {
+            display: none;
+            opacity: .5;
+        }
+        
         #wrap {
             background: 50% 50% url('img/bg.png');
             background-size: cover;
@@ -90,7 +96,7 @@
     </style>
 </head>
 
-<body>
+<body class="hidden-load">
     <script>
         // 檢查登入狀態
         function statusChangeCallback(response) {

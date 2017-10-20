@@ -25,6 +25,7 @@
     <!-- swiper -->
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/all.js"></script>
     <style>
         #wrap {
             background: 50% 50% url('img/bg.png');
@@ -33,6 +34,10 @@
             justify-content: center;
             min-height: calc(100vh - 105px);
             padding: 20px;
+        }
+        
+        .hidden-load {
+            display: none;
         }
         
         .form-area {
@@ -93,7 +98,7 @@
     </style>
 </head>
 
-<body>
+<body class="hidden-load">
     <script>
         // 檢查登入狀態
         function statusChangeCallback(response) {

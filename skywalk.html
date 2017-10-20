@@ -25,9 +25,14 @@
     <!-- swiper -->
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/all.js"></script>
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
+        }
+        
+        .hidden-load {
+            opacity: .5;
         }
         
         .text-main {
@@ -414,7 +419,7 @@
     </style>
 </head>
 
-<body>
+<body class="hidden-load">
     <script>
         // 檢查登入狀態
         function statusChangeCallback(response) {
