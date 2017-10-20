@@ -795,7 +795,8 @@
                 </div>
 
                 <!-- <div class="fb-share-button mx-auto mb-2 px-5" data-href="https://wwchen412.github.io/princess/" data-hashtag="#123" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse">分享</a></div> -->
-                <button id="shareBtn" class="btn btn-primary mx-auto mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
+                <!-- <button id="shareBtn" class="btn btn-primary mx-auto mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button> -->
+                <a href="form.html" class="btn btn-primary mx-auto mb-2 px-5 modal-link"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</a>
 
             </div>
         </div>
@@ -806,23 +807,7 @@
             $('#exampleModalLong').modal('show');
         });
     </script>
-    <script>
-        document.getElementById('shareBtn').onclick = function() {
-            FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: 'https://wwchen412.github.io/princess/skywalk.html',
-                hashtag: '#盛世公主遊你夢想',
-            }, function(response) {
-                if (response && !response.error_message) {
-                    alert('分享成功！我們將於2017/11/13、2017/11/20公布得獎資料。');
-                    document.location.href = "index.html";
-                } else {
-                    alert('分享失敗！請再嘗試已完成活動。');
-                }
-            });
-        }
-    </script>
+
     <script>
         $(document).ready(function() {
 
