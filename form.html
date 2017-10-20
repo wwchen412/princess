@@ -31,7 +31,8 @@
             background-size: cover;
             display: flex;
             justify-content: center;
-            min-height: 100vh;
+            min-height: calc(100vh - 105px);
+            padding: 20px;
         }
         
         .form-area {
@@ -53,6 +54,26 @@
         @media screen and (max-width:1090px) {
             .navbar {
                 padding: 0;
+            }
+        }
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            #wrap{
+                position: relative;
+                min-height: 100vh;
+              
+             }
+            .block {
+                position: absolute;
+              top:50%;    
+             
+              transform: translateY(-50%) translateX(-50%);
+            }
+            .form-area{
+                position: absolute;
+              top:50%;    
+             width: 400px;
+              transform: translateY(-50%) translateX(-50%); 
             }
         }
     </style>
