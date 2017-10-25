@@ -40,6 +40,10 @@
             color: #005EA1;
         }
         
+        .mainlogo {
+            width: 400px;
+        }
+        
         .hero-img {
             background: url('img/sky.png');
             background-size: cover;
@@ -135,9 +139,17 @@
         .wave {
             width: 100%;
             position: absolute;
-            bottom: 87px;
+            bottom: 57px;
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
             z-index: 2;
+        }
+        
+        .wave1 {
+            width: 100%;
+            position: absolute;
+            bottom: 95px;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+            z-index: 0;
         }
         
         .hero-img:before {
@@ -181,14 +193,24 @@
             animation-delay: -2s;
         }
         
+        .wave1 .parallax use {
+            animation-delay: -8s;
+            animation-duration: 14s
+        }
+        
         .wave2 .parallax use {
-            animation-delay: -2s;
-            animation-duration: 4s
+            animation-delay: -5s;
+            animation-duration: 15s
+        }
+        
+        .wave4 .parallax use {
+            animation-delay: -5s;
+            animation-duration: 10s
         }
         
         .use:nth-child(3) {
             animation-delay: -4s;
-            animation-duration: 3s
+            animation-duration: 13s
         }
         
         .wave3 {
@@ -229,9 +251,6 @@
         .book-now a:hover {
             filter: drop-shadow(0px 0px 15px rgba(255, 233, 255, .6));
         }
-        /* .book-now img {
-            width: 130px;
-        } */
         
         @keyframes move-forever {
             0% {
@@ -249,6 +268,9 @@
         }
         
         @media screen and (max-width:768px) {
+            .mainlogo {
+                max-width: 220px;
+            }
             .cloud2 {
                 top: 60px;
                 animation: cloud 20s -3s infinite linear;
@@ -308,6 +330,9 @@
             }
             .wave {
                 bottom: 30px;
+            }
+            .wave1 {
+                bottom: 40px;
             }
             .hero-img:before {
                 height: 30px;
@@ -436,15 +461,15 @@
 <body class="">
     <header>
         <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
-
-            <img src="img/logo.svg" alt="" width="200px;">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="" class="mainlogo">
+            </a>
             <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light">
-
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
@@ -484,14 +509,30 @@
                     <!-- 浪 -->
                     <div class="wave">
                         <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                                <defs>
-                                        <path id="gentle-wave" d="M-150 44c30 0 
-                                        58-10 88-10s
-                                        58 10 88 10 
-                                        58-10 88-10 
-                                        58 10 88 10
-                                        v44h-352z" />
-                                </defs>
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c50 0 
+                                58-6 88-6s
+                                58 6 88 6 
+                                58-6 88-6 
+                                58 6 88 6
+                                v44h-352z" />
+                        </defs>
+                                <g class="parallax">
+                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+                                   
+                                </g>
+                            </svg>
+                    </div>
+                    <div class="wave1">
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c50 0 
+                                58-6 88-6s
+                                58 6 88 6 
+                                58-6 88-6 
+                                58 6 88 6
+                                v44h-352z" />
+                        </defs>
                                 <g class="parallax">
                                     <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
                                    
@@ -502,10 +543,10 @@
                         <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
                                 <defs>
                                         <path id="gentle-wave" d="M-150 44c30 0 
-                                        58-10 88-10s
-                                        58 10 88 10 
-                                        58-10 88-10 
-                                        58 10 88 10
+                                        58-3 88-3s
+                                        58 3 88 3 
+                                        58-3 88-3 
+                                        58 3 88 3
                                         v44h-352z" />
                                 </defs>
                                 <g class="parallax">
@@ -560,7 +601,7 @@
                     <div class="swiper-container">
                         <div class="list-unstyled text-white d-none  select-share text-center swiper-wrapper">
                             <div class="text-center swiper-slide">
-                                <a href="#1" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
+                                <a href="#1" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot1.jpg" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
                                 
                                 " data-link="form.html">
                                     <img src="img/href.png" alt="" class="d-block mx-auto">
@@ -568,33 +609,33 @@
                                 </a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="聲光水影秀" data-p="每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"><img src="img/hoverpic1.png" class="mx-auto" alt="">聲光水影秀</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot.jpg" data-title="聲光水影秀" data-p="每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"><img src="img/hoverpic.jpg" class="mx-auto" alt="">聲光水影秀</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">星空露天電影院</a>
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot2.jpg" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic2.jpg" class="mx-auto" alt="">星空露天電影院</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot7.jpg" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">豪華免稅購物</a>
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic3.jpg" class="mx-auto" alt="">豪華免稅購物</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot4.jpg" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
                                 
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">米其林水準佳餚</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot5.jpg" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">蓮花水療</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot3.jpg" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">公主劇院</a>
                             </div>
                             <div class="text-center swiper-slide">
-                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot6.jpg" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
                                 
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">海上豪華ktv</a>
                             </div>
@@ -618,10 +659,10 @@
                         <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
                                 <defs>
                                     <path id="gentle-wave" d="M-150 44c30 0 
-                                58-10 88-10s
-                                58 10 88 10 
-                                58-10 88-10 
-                                58 10 88 10
+                                    58-6 88-6s
+                                    58 6 88 6 
+                                    58-6 88-6 
+                                    58 6 88 6
                                 v44h-352z" />
                                 </defs>
                                 <g class="parallax">
@@ -746,7 +787,7 @@
               </button>
                 </div>
                 <div class="modal-body">
-                    <img src="img/walk.png" alt="" class="img-fluid rounded">
+                    <img src="" alt="" class="img-fluid rounded modal-imglink">
                     <p style="line-height:200%;font-size:.8rem;" class="modal-p">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
                         <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
                     </p>
@@ -772,10 +813,12 @@
             var modal_title = button.data('title');
             var modal_p = button.data('p');
             var modal_link = button.data('link');
+            var modal_imglink = button.data('imglink');
             var modal = $(this);
             modal.find('.modal-title').text(modal_title);
             modal.find('.modal-p').text(modal_p);
             modal.find('.modal-link').attr('href', modal_link);
+            modal.find('.modal-imglink').attr('src', modal_imglink);
 
         })
     </script>
@@ -813,7 +856,7 @@
             $('.book-now-js').click(function() {
                 $('.select-share').removeClass('d-none').addClass('d-block');
                 $('html, body').animate({
-                    scrollTop: $("#navtoggle").offset().top - 100
+                    scrollTop: $("#navtoggle").offset().top - 150
                 }, 1000);
             });
         })
