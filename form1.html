@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <title>盛世公主 海上天空步道</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- fb meta -->
+    <meta property="og:url" content="https://wwchen412.github.io/princess/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="盛世公主 海上天空步道" />
+    <meta property="og:description" content="盛世公主遊你夢想，即日起至11/15(三)，選出喜愛的盛世公主號特色設施，Tag一位朋友並寫下為什麼想在這裡打卡分享，同時Hashtag #盛世公主遊你夢想，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。
+    " />
+    <meta property="og:image" content="img/ship.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/all.js"></script>
+    <style>
+        .hidden-load {
+            display: none;
+            opacity: .5;
+        }
+        
+        #wrap {
+            background: 50% 50% url('img/bg.png');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            min-height: calc(100vh - 105px);
+            padding: 20px;
+        }
+        
+        .mainlogo {
+            width: 400px;
+        }
+        
+        .form-area {
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, .95);
+            padding: 20px;
+            align-self: center;
+            margin: 0 15px;
+        }
+        
+        .block {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 25px;
+            align-self: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        @media screen and (max-width:1090px) {
+            .navbar {
+                padding: 0;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .mainlogo {
+                max-width: 220px;
+            }
+            #wrap {
+                min-height: calc(100vh - 49px);
+            }
+            .navbar-toggler {
+                position: absolute;
+                right: 10px;
+                top: 6px;
+            }
+        }
+        
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            #wrap {
+                position: relative;
+                min-height: 100vh;
+                overflow: hidden;
+            }
+            .block {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+            .form-area {
+                position: absolute;
+                top: 50%;
+                width: 400px;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="hidden-load">
+    <script>
+        // 檢查登入狀態
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            }
+        }
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+        // fbinit
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '256834864809662',
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // fb登入
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+        // 登入後動作
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                document.querySelector('.form-area').classList.remove("d-none");
+                document.querySelector('.block').classList.add('d-none');
+                document.querySelector('#validationCustom02').value = response.name;
+
+
+            });
+            FB.api('/me', {
+                fields: 'name,email'
+            }, function(response) {
+
+                document.querySelector('#validationCustom04').value = response.email;
+            });
+        }
+    </script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header>
+        <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
+
+            <a href="index.html">
+                <img src="img/logo.svg" alt="" class="mainlogo">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3 active">
+                        <a class="nav-link text-primary" href="#">活動辦法 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">設施介紹</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">行程簡介</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">早鳥優惠</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div id="wrap">
+        <!-- login -->
+        <div class="block rounded">
+            <h3 class="mb-3 text-primary">登入後繼續參加活動</h3>
+            <hr>
+            <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
+                <span aria-hidden="true" style="">×</span>
+              </button>
+            <button class="btn btn-outline-secondary p-1" style="font-size:10px;" onclick="history.back()"> 回上一頁</button>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-loginbtn mx-auto" style="color:#fff;">請先登入並繼續
+            </fb:login-button>
+        </div>
+        <!-- form -->
+        <div class="form-area rounded border d-none" style="position:relative;">
+            <div class="container">
+                <div class="row">
+                    <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
+                                <span aria-hidden="true" style="">×</span>
+                              </button>
+                    <form class="container" id="needs-validation" novalidate action="share2.html">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-primary text-center">請填寫領獎聯絡方式</h3>
+                                <hr>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom01">姓名</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="姓名" value="" required>
+
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom02">暱稱</label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="您的暱稱" value="" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">電話</label>
+                                <input type="tel" class="form-control" id="validationCustom03" placeholder="電話" required>
+
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom04">E-Mail</label>
+                                <input type="email" class="form-control" id="validationCustom04" placeholder="Email" required>
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary mx-auto d-block px-5" type="submit">繼續</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function SendForm() {
+            $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
+                "name": document.getElementById("validationCustom01").value,
+                "ni_name": document.getElementById("validationCustom02").value,
+                "phone": document.getElementById("validationCustom03").value,
+                "email": document.getElementById("validationCustom04").value
+            });
+        }
+
+        (function() {
+            "use strict";
+            window.addEventListener("load", function() {
+                var form = document.getElementById("needs-validation");
+                form.addEventListener("submit", function(event) {
+                    if (form.checkValidity() == false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        SendForm();
+                    }
+                    form.classList.add("was-validated");
+                }, false);
+            }, false);
+        }());
+    </script>
+</body>
+
+</html>

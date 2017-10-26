@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <title>盛世公主 遊您夢想</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- fb meta -->
+    <meta property="og:url" content="https://wwchen412.github.io/princess/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" coantent="盛世公主" />
+    <meta property="og:description" content="盛世公主遊你夢想，即日起至11/15(三)，選出喜愛的盛世公主號特色設施，Tag一位朋友並寫下為什麼想在這裡打卡分享，同時Hashtag #盛世公主遊你夢想，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。
+ " />
+    <meta property="og:image" content="img/ship.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- .swiper -->
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/smil.check.js"></script>
+    <script src="js/smil.user.js"></script>
+    <script src="js/all.js"></script>
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
+        }
+        
+        a {
+            text-decoration: none !important;
+        }
+        
+        .text-main {
+            color: #005EA1;
+        }
+        
+        .mainlogo {
+            width: 400px;
+        }
+        
+        .hero-img {
+            background: url('img/sky.png');
+            background-size: cover;
+            /* height: calc(100vh - 90px); */
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slogan {
+            position: relative;
+            transform: translateX(10px);
+            z-index: 1;
+        }
+        
+        .ship {
+            margin-top: -10%;
+            text-align: center;
+            /* transform: translateY(40%); */
+            animation: ship 1.5s alternate infinite linear;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes ship {
+            0% {
+                transform: translateY(10px)
+            }
+            100% {
+                transform: translateY(0px)
+            }
+        }
+        
+        .cloud {
+            position: absolute;
+            left: 0vw;
+            z-index: 0;
+        }
+        
+        .cloud img {
+            width: 200px;
+        }
+        
+        .cloud2 img {
+            width: 250px;
+        }
+        
+        .cloud3 img {
+            width: 300px;
+        }
+        
+        .cloud1 {
+            top: 30%;
+            animation: cloud 35s infinite linear;
+        }
+        
+        .cloud2 {
+            top: 60px;
+            animation: cloud 40s -3s infinite linear;
+        }
+        
+        .cloud3 {
+            top: 50%;
+            animation: cloud 44s -5s infinite linear;
+        }
+        
+        .cloud4 {
+            top: 40%;
+            z-index: 2;
+            animation: cloud 42s -13s infinite linear;
+        }
+        
+        .cloud5 {
+            top: 52%;
+            animation: cloud 47s -7.5s infinite linear;
+        }
+        
+        .cloud6 {
+            top: 38%;
+            z-index: 2;
+            animation: cloud 30s -10s infinite linear;
+        }
+        
+        @keyframes cloud {
+            0% {
+                transform: translateX(-20vw);
+            }
+            100% {
+                transform: translateX(120vw);
+            }
+        }
+        
+        .wave {
+            width: 100%;
+            position: absolute;
+            bottom: 57px;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+            z-index: 2;
+        }
+        
+        .wave1 {
+            width: 100%;
+            position: absolute;
+            bottom: 95px;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+            z-index: 0;
+        }
+        
+        .hero-img:before {
+            content: '';
+            width: 100%;
+            height: 87px;
+            position: absolute;
+            bottom: 0;
+            background-color: #005EA1;
+            z-index: 3;
+        }
+        
+        .wave2 {
+            width: 100%;
+            position: absolute;
+            bottom: -5px;
+            z-index: 4;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+        }
+        
+        .iland {
+            position: absolute;
+            left: 10px;
+            bottom: 35px;
+            z-index: 3;
+        }
+        
+        .editorial {
+            display: block;
+            width: 100%;
+            height: 10em;
+            max-height: 100vh;
+            margin: 0;
+        }
+        
+        .parallax use {
+            animation: move-forever 12s linear infinite;
+        }
+        
+        .use {
+            animation-delay: -2s;
+        }
+        
+        .wave1 .parallax use {
+            animation-delay: -8s;
+            animation-duration: 14s
+        }
+        
+        .wave2 .parallax use {
+            animation-delay: -5s;
+            animation-duration: 15s
+        }
+        
+        .wave4 .parallax use {
+            animation-delay: -5s;
+            animation-duration: 10s
+        }
+        
+        .use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s
+        }
+        
+        .wave3 {
+            width: 100%;
+            position: absolute;
+            top: -115px;
+            left: 0;
+            pointer-events: none;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+        }
+        
+        .book-now {
+            position: absolute;
+            right: 20px;
+            bottom: 70px;
+            z-index: 5;
+        }
+        
+        .book-now-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 70px;
+            z-index: 5;
+        }
+        
+        .book-now:before {
+            content: '';
+            display: block;
+            width: 300%;
+            position: absolute;
+            left: -300%;
+            border-bottom: 2px dashed #fff;
+            top: 55%;
+        }
+        
+        .book-now img:hover,
+        .book-now a:hover {
+            filter: drop-shadow(0px 0px 15px rgba(255, 233, 255, .6));
+        }
+        
+        @keyframes move-forever {
+            0% {
+                transform: translate(-90px, 0%)
+            }
+            100% {
+                transform: translate(85px, 0%)
+            }
+        }
+        
+        @media screen and (max-width:1090px) {
+            .navbar {
+                padding: 0;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .mainlogo {
+                max-width: 220px;
+            }
+            .cloud2 {
+                top: 60px;
+                animation: cloud 20s -3s infinite linear;
+            }
+            .cloud3 {
+                top: 50%;
+                animation: cloud 24s -5s infinite linear;
+            }
+            .cloud4 {
+                top: 40%;
+                z-index: 2;
+                animation: cloud 22s -13s infinite linear;
+            }
+            .cloud5 {
+                top: 52%;
+                animation: cloud 17s -7.5s infinite linear;
+            }
+            .cloud6 {
+                top: 38%;
+                z-index: 2;
+                animation: cloud 20s -10s infinite linear;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h4 {
+                font-size: 1.2rem;
+            }
+            .wave {
+                bottom: 95px;
+            }
+            .hero-img:before {
+                height: 95px;
+            }
+            .navbar-toggler {
+                position: absolute;
+                right: 10px;
+                top: 6px;
+            }
+            .editorial {
+                height: 5em;
+            }
+            .ship img {
+                bottom: 70px;
+            }
+            .wave3 {
+                top: -80px;
+            }
+        }
+        
+        @media screen and (max-width:576px) {
+            .ship {
+                margin-top: -30%;
+                text-align: center;
+                /* transform: translateY(40%); */
+                animation: ship 2s alternate infinite linear;
+            }
+            .wave {
+                bottom: 30px;
+            }
+            .wave1 {
+                bottom: 40px;
+            }
+            .hero-img:before {
+                height: 30px;
+            }
+            .iland {
+                max-width: 150px;
+                bottom: 10px;
+                left: 0;
+            }
+            .book-now {
+                position: absolute;
+                right: 5px;
+                bottom: 0px;
+                z-index: 5;
+            }
+            .book-now img {
+                width: 80px;
+            }
+            .book-now:before {
+                content: '';
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: -100%;
+                border-bottom: 2px dashed #fff;
+                top: 55%;
+            }
+        }
+        
+        .swiper-container {
+            padding: 0 30px;
+        }
+        
+        .big-title {
+            padding-top: 50px;
+            letter-spacing: 5px;
+        }
+        
+        .section3 {
+            background: #005EA1;
+            padding-bottom: 100px;
+        }
+        
+        .select-share {
+            white-space: nowrap;
+        }
+        
+        .select-share>div {
+            display: inline-block;
+            white-space: normal;
+            vertical-align: top;
+        }
+        
+        .section4 {
+            position: relative;
+        }
+        
+        .white-wave {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 100%;
+            filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+        }
+        
+        @keyframes move-ie {
+            0% {
+                transform: translate(-10%, 10px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 50px;
+        }
+        /* modal */
+        
+        .modal-content {
+            border: 0;
+        }
+        
+        .hoverChange img:nth-child(2) {
+            display: none;
+        }
+        
+        .hoverChange:hover img:nth-child(2) {
+            display: block;
+        }
+        
+        .hoverChange:hover img:nth-child(1) {
+            display: none !important;
+        }
+        
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            .hero-img {
+                display: block !important;
+                overflow: hidden;
+            }
+            .swiper-slide {
+                width: calc(100% / 8);
+            }
+            .wave {
+                width: 112%;
+                animation: move-ie 3.5s linear alternate infinite;
+            }
+            .wave2 {
+                width: 115%;
+                animation: move-ie 5s linear alternate infinite;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none !important;
+            }
+            .cloud {
+                animation: none !important;
+            }
+            .cloud2 {
+                transform: translateX(50%);
+            }
+            .cloud3 {
+                transform: translateX(80vw);
+            }
+            .cloud4 {
+                transform: translateX(70vw);
+            }
+            .modal-link {
+                max-width: 150px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="">
+    <header>
+        <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
+
+            <a href="index.html">
+                <img src="img/logo.svg" alt="" class="mainlogo">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3 active">
+                        <a class="nav-link text-primary" href="#">活動辦法
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">設施介紹</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">行程簡介</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-primary" href="#">早鳥優惠</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <!-- 動畫 -->
+    <section class="section1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hero-img ship-bg d-md-flex  flex-wrap d-sm-block py-3">
+                    <!-- 標語 -->
+                    <div class="col-md-6 col-lg-4  col-xl-4 mx-auto col-xs-12 col-sm-6 ">
+                        <div class="slogan  pt-3">
+                            <img src="img/slogan.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <!-- 船 -->
+                    <div class="ship col-lg-8 mx-auto">
+                        <img src="img/ship.png" alt="" class="img-fluid">
+                    </div>
+                    <!-- 浪 -->
+                    <div class="wave">
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c50 0 
+                                58-6 88-6s
+                                58 6 88 6 
+                                58-6 88-6 
+                                58 6 88 6
+                                v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
+                            </svg>
+                    </div>
+                    <div class="wave1">
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c50 0 
+                                58-6 88-6s
+                                58 6 88 6 
+                                58-6 88-6 
+                                58 6 88 6
+                                v44h-352z" />
+                        </defs>
+                                <g class="parallax">
+                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+                                   
+                                </g>
+                            </svg>
+                    </div>
+                    <div class="wave2">
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                                <defs>
+                                        <path id="gentle-wave" d="M-150 44c30 0 
+                                        58-3 88-3s
+                                        58 3 88 3 
+                                        58-3 88-3 
+                                        58 3 88 3
+        ss
+                                        v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
+
+                            </g>
+                        </svg>
+                    </div>
+                    <!-- 島 -->
+                    <div class="iland">
+                        <img src="img/iland.png" alt="" class="img-fluid">
+                    </div>
+                    <!-- 雲 -->
+                    <div class="cloud cloud1 d-none d-md-block">
+                        <img src="img/cloud.svg" alt="" class="img-fluid">
+                    </div>
+                    <div class="cloud cloud2 d-none d-md-block">
+                        <img src="img/cloud.svg" alt="" class="img-fluid">
+                    </div>
+                    <div class="cloud cloud3 d-none d-md-block">
+                        <img src="img/cloud.svg" alt="" class="img-fluid">
+                    </div>
+                    <div class="cloud cloud4 ">
+                        <img src="img/cloud.svg" alt="" class="img-fluid">
+                    </div>
+                    <div class="cloud cloud5 ">
+                        <img src="img/cloud.svg" alt="" class="img-fluid">
+                    </div>
+                    <!-- 刷卡 -->
+                    <div class="book-now">
+                        <div class="text-light">
+                            <img src="img/credit-card.png" alt="" class="mb-2 img-fluid">
+                            <br> 立即預約公主
+                        </div>
+                    </div>
+                    <!-- 打卡趣 展開 -->
+                    <button class="btn btn-warning book-now-btn book-now-js text-light">
+                        立即打卡趣
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- 茅點 -->
+    <section class="section py-4" id="navtoggle" style="background:#00b2e0;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" col-12 href-slider  pb-5" style="background:#00b2e0;">
+
+                    <div class="swiper-container">
+                        <div class="list-unstyled text-white d-none  select-share text-center swiper-wrapper">
+                            <div class="text-center swiper-slide">
+                                <a href="#1" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot1.jpg" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
+                                
+                                " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic1.jpg" class="mx-auto" alt=""> 海上天空步道
+                                </a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot.jpg" data-title="聲光水影秀" data-p="每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"><img src="img/hoverpic.jpg" class="mx-auto" alt="">聲光水影秀</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot2.jpg" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic2.jpg" class="mx-auto" alt="">星空露天電影院</a>
+
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot3.jpg" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
+                                    " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic3.jpg" class="mx-auto" alt="">公主劇院</a>
+
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot4.jpg" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
+                                    
+                                    " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic4.jpg" class="mx-auto" alt="">米其林水準佳餚</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot5.jpg" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
+                                    " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic5.jpg" class="mx-auto" alt="">蓮花水療</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot6.jpg" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
+                                    
+                                    " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic6.jpg" class="mx-auto" alt="">海上豪華ktv</a>
+                            </div>
+                            <div class="text-center swiper-slide">
+                                <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot7.jpg" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
+                                
+
+                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic7.jpg" class="mx-auto" alt="">豪華免稅購物</a>
+
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-prev swiper-button-disabled"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- 標語 -->
+    <section class="section3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 py-3">
+                    <div class="wave3">
+                        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
+                                58-3 88-3s
+                                58 3 88 3 
+                                58-3 88-3 
+                                58 3 88 3s
+                                v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
+                            </svg>
+                    </div>
+                    <h2 class="text-light text-center big-title">是你，讓我感到輕鬆奢華</h2>
+                    <h4 class="text-light text-center py-2" style="line-height:200%;">慶祝盛世公主號首次來台航行旅遊
+                        <br> 我們將舉辦一系列活動邀您一同共襄盛舉，來體會盛世公主，遊你夢想的最佳
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section4 py-3">
+        <div class="white-wave">
+            <img src="img/white-wave.svg" alt="" class="d-block">
+        </div>
+        <div class="container">
+            <!--  活動一 -->
+            <div class="row my-3">
+                <div class="col-12">
+                    <h3 class="text-main">
+                        <img src="img/location.svg" alt="" class="icon mr-3 mb-3">夢想公主．打卡趣 </h3>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+                    <h5> 活動期間：2017/11/01-11/15</h5>
+                    <h5>活動步驟:</h5>
+                    <ol>
+                        <li>至《盛世公主‧打卡趣》專區，選擇喜愛的盛世公主號特色設施</li>
+                        <li>填寫參加者個人基本資料</li>
+                        <li>選出想進行打卡的設施，Tag一位朋友並寫下為什麼想在這裡打卡分享，同時Hashtag #盛世公主遊你夢想</li>
+                        <li>公開分享至個人Facebook塗鴉牆即有抽獎資格</li>
+                    </ol>
+                    <h6>獎項：</h6>
+                    <ol>
+                        <li>2017/11/08、2017/11/16分別抽出100名獲贈公主紀念禮組；於2017/11/13、2017/11/20公布得獎資料。 (每帳號每日限參加一次，11/08統計範圍：2017/11/01-11/07。11/16統計範圍：2017/11/08-11/15)
+                        </li>
+                        <li>2017/11/24抽出「2018/4/8 基隆港出發，盛世公主號4天沖繩自主遊_雙人內艙房」一組 (每帳號每日限參加一次)
+                        </li>
+                    </ol>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img src="img/active1.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 text-center">
+                    <a href="#navtoggle" class="btn d-inline-block mx-auto bg-primary text-light my-3 px-5  book-now-js">立即前往</a>
+                </div>
+            </div>
+            <!-- 活動二 -->
+            <div class="row my-3 mt-5">
+                <div class="col-12">
+                    <h3 class="text-main">
+                        <img src="img/movie.svg" alt="" class="icon mr-3 mb-3">我的公主．夢想時刻 </h3>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+                    <h5>活動期間: 2017/11/17-11/30
+                    </h5>
+                    <h5>活動步驟:</h5>
+
+                    <ol>
+                        <li>至《公主時刻‧遊你夢想》觀賞夢想短片</li>
+                        <li>填寫參加者個人基本資料 </li>
+                        <li>選出喜愛的夢想短片，Tag三名朋友並寫下「2018一起搭盛世公主號，實現我們的夢想時刻吧！」，同時Hashtag #盛世公主遊你夢想</li>
+                        <li>公開分享至個人Facebook塗鴉牆及有抽獎資格</li>
+                    </ol>
+                    <h6>獎項:</h6>
+                    <p class="pl-3">2017/12/15抽出「2018/4/21 基隆港出發，盛世公主號4天沖繩自主遊_雙人內艙房」(每帳號每日限參加一次)git
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <img src="img/active2.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 text-center">
+                    <a href="" class="btn d-inline-block mx-auto bg-secondary text-light my-3 disabled px-5">即將開始</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 注意事項 -->
+    <div class="alert-way p-3" style="font-size:8px;color:#666;">
+        <div class="container">
+            <p>注意事項</p>
+
+            <ol>
+                <li>參與本活動需詳細閱讀並同意遵守本活動注意事項。如有違反者，英商康年華旅行社股份有限公司台灣分公司(以下稱主辦單位)有權得以不經通知立即取消本活動參加資格。</li>
+                <li>本活動限中華民國台灣地區（台澎金馬地區）之使用者參加。</li>
+                <li>本活動主辦單位，對本活動網站有絕對的管理權，並就活動參加者之資格有審查之權利；若經審認資格不符、不妥情事者，本活動主辦單位有權取消得獎資格或逕行刪除其相關權利。</li>
+                <li>參加者同意所有參加者所留存或產生之任何參與活動的資料及記錄，皆以主辦單位的電腦系統與時間的紀錄為主。如有任何因電腦、網路、電話、技術或不可歸責與主辦單位之事由，而使參加者送出之資料有延遲、遺失、錯誤、無法辨識之情況，主辦單位不負責任何法律責任，參加者不得因此異議。</li>
+                <li>如參加活動過程中因天災或其他不可抗力所致之服務停止或中斷，該序號經系統便是為使用過，主辦單位不負責任何法律責任，參加者不得因此異議。</li>
+                <li>主辦單位有權檢視各活動參加者之活動參與行為及中獎情形是否涉嫌例：以任何駭客或其他非法行為破壞活動規則者，人為操作、蓄意偽造、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺或以任何其他不正當的方式意圖以進行不實或虛偽活動參與行為，活動參加者因上述情形所獲得之活動資格及獎額，主辦單位保有取消參加集中獎資格的權利，並保留法律追訴權。若有違反常理或涉嫌不法之異常狀況者、或登錄資料不實或不正確，或有違反活動規範之行為，主辦單位保留變更、終止本活動及審核參加者參加活動資格之權利，主辦單位並對有關參加者或得獎者保留法律追訴權。。</li>
+                <li>獎項以公佈於本網站上的資料為準，如遇不可抗力之因素，主辦單位保留修改活動與獎項細節的權利，無須事前通知，並有權對本活動所有事宜作出解釋或裁決。如本活動因不可抗力之特殊原因無法執行時，主辦單位有權決定取消、終止、修改或暫停本活動，如有任何未盡事宜均以主辦單位依中華民國法律解釋之。</li>
+                <li>各獎項兌換及規定，需透過活動填寫基本資料中的真實姓名與聯絡信箱進行認證，如有未符合之事項視為放棄。為保障得獎權益，請確認所填寫之聯絡資料是否正確。若因資料填寫不實、不完整，致無法順利送出獎項，則該獎項將視同無條件放棄，亦不另行抽出遞補者。且主辦單位保留更換等值贈品的權利。</li>
+                <li>獎品寄送地區僅限為台灣、金門、澎湖、馬祖地區，主辦單位恕不處理郵寄獎項至海外地區之事宜。 得獎者須同意遵守各獎品供應商所列有關獎品之各項條款及細則，且得獎者同意主辦單位對所有領取或使用獎品之後果概無須負責。</li>
+                <li>得獎名單公佈於活動網站，並於公佈後一週內以參加活動時填寫之聯絡信箱E-mail通知得獎人；得獎者收到得獎通知信後，請回覆得獎通知並填妥得獎證明書，以確認其領獎資格。</li>
+                <li>本活動之所有獎品不得轉換、轉讓或折換現金。</li>
+                <li>所有中獎者需於2017/12/29(五)前填妥並回傳得獎證明書、身份證正反面影本等相關報名文件，並繳付中獎而產生之稅金，逾期未領取者視同放棄中獎權益。如因寄送過程中發生信件遺失、信封破損或其他不可歸責於主辦單位之原因，導致兌獎憑證遺失或無法辨識，或得獎者資料填寫不完整或不清楚，導致未能或不符合資格兌獎，得獎者同意主辦單位無須為此負任何責任。</li>
+                <li>活動參加者需保證所有填寫或提出之資料均為真實且正確，並未冒用或盜用他人資料，如有不實或不正確資訊，主辦單位將取消其中獎資格，並就其損害主辦單位或任何第三人權益，保留一切民、刑事訴追之責。</li>
+                <li>參加者同意主辦單位因本活動蒐集、處理、利用所提供之個人資料，除了作為聯繫得獎人依據憑證外，將作為主辦單位未來傳遞相關消息之用。活動參加者得依法得向主辦單位請求查詢、複製、補充更正、停止蒐集處理利用或刪除其個人資料，得獎者同時授權主辦單位公開公佈姓名。</li>
+                <li>依中華民國稅法規定，中獎價值在NT$1,001元以上者，須繳交身分證正反面影本供報稅使用，年度報稅時將記入個人所得。中獎價值在NT$20,001元以上者，依法須繳交10%稅金。得獎者若非中華民國國境內設籍之國人（即在中華民國境內居住未達183天之本國人及外國人）不論得獎者所得之金額，須就中獎所得扣繳20%機會中獎稅。若得獎者不願先行繳納本項稅金，視同放棄中獎資格，且不得異議。財政部台北國稅局實施「憑單無紙化」，自2014年起所得稅各式憑單符合一定情形者，憑單填發單位如期向國稅局辦理憑單申報後，原則上免寄發憑單給納稅義務人。得獎者須於隔年５月底前完成申報。</li>
+                <li>本活動網頁之所有內容由主辦單位擁有所有版權，未經許可，不可抄襲、拷貝與複製相關圖片與文字，主辦單位保留所有侵權事宜之法律追訴權利。</li>
+                <li>本活動注意事項說明如有其他未盡事宜，或有任何變更或修改，則依活動網站公告為主，不再另行通知。主辦單位有保留取消、終止、修改或暫停本活動之權利，並保有最終釋義權。</li>
+            </ol>
+        </div>
+
+    </div>
+    <footer>
+        <div class="copyrigth">
+            <p class="text-center text-light p-2 m-0" style="background:#005EA1;font-size:.8rem;">
+                最佳瀏覽環境為Chrome 1024 x 768 視窗模式以上
+                <br>英商康年華旅行社股份有限公司臺灣分公司 Carnival PLC, Taiwan Branch. Copyright © 2017+ Carnival PLC, Taiwan Branch. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  bg-primary text-light">
+                    <h5 class="modal-title " id="exampleModalLongTitle">聲光水影秀</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style=""> 
+                <span aria-hidden="true" style="">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/spot.jpg" alt="" class="img-fluid rounded">
+                    <p style="line-height:200%;font-size:.8rem;">每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
+                    </p>
+                </div>
+
+                <!-- <div class="fb-share-button mx-auto mb-2 px-5" data-href="https://wwchen412.github.io/princess/" data-hashtag="#123" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwwchen412.github.io%2Fprincess%2F&amp;src=sdkpreparse">分享</a></div> -->
+                <!-- <button id="shareBtn" class="btn btn-primary mx-auto mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button> -->
+                <a href="form2.html" class="btn btn-primary mx-auto mb-2 px-5 modal-link"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(window).on('load', function() {
+            $('#exampleModalLong').modal('show');
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            var swiper = new Swiper('.swiper-container', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                slidesPerView: 8,
+                spaceBetween: 0,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 8,
+
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 40
+                    },
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    320: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                }
+            });
+        });
+        $(function() {
+            $('.book-now-js').click(function() {
+                $('.select-share').removeClass('d-none').addClass('d-block');
+                $('html, body').animate({
+                    scrollTop: $("#navtoggle").offset().top - 100
+                }, 1000);
+            });
+        })
+    </script>
+
+</body>
+
+</html>
