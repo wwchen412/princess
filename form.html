@@ -233,7 +233,7 @@
             </fb:login-button>
         </div>
         <!-- form -->
-        <div class="form-area rounded border d-none" style="position:relative;">
+        <div class="form-area rounded border" style="position:relative;">
             <div class="container">
                 <div class="row">
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
@@ -248,9 +248,7 @@
                             <div class="col-md-12 mb-3">
                                 <label for="validationCustom01">姓名</label>
                                 <input type="text" class="form-control" id="validationCustom01" placeholder="姓名" value="" required>
-                                <!-- <div class="invalid-feedback">
-                                    請輸入姓名
-                                </div> -->
+
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="validationCustom02">暱稱</label>
@@ -261,21 +259,17 @@
                             <div class="col-md-12 mb-3">
                                 <label for="validationCustom03">電話</label>
                                 <input type="tel" class="form-control" id="validationCustom03" placeholder="電話" required>
-                                <!-- <div class="invalid-feedback">
-                                    請輸入電話
-                                </div> -->
+
                             </div>
                             <div class="col-md-12 mb-3">
                                 <label for="validationCustom04">E-Mail</label>
                                 <input type="mail" class="form-control" id="validationCustom04" placeholder="Email" required>
-                                <!-- <div class="invalid-feedback">
-                                    請輸入電子信箱
-                                </div> -->
+
                             </div>
 
                         </div>
 
-                        <button class="btn btn-primary mx-auto d-block px-5" type="submit">繼續</button>
+                        <button class="btn btn-primary mx-auto d-block px-5" type="button" onclick="SendScore()">繼續</button>
 
                     </form>
 
@@ -289,6 +283,17 @@
 
 
     <script>
+        function SendScore() {
+            $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
+                    "name": document.getElementById("validationCustom01").value,
+                    "ni_name": document.getElementById("validationCustom02").value,
+                    "phone": document.getElementById("validationCustom03").value,
+                    "email": document.getElementById("validationCustom04").value
+                },
+                function(data) {
+                    window.location.href = "share.html";
+                });
+        }
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
             "use strict";
