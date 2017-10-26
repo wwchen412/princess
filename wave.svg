@@ -4,7 +4,7 @@
 	 viewBox="0 0 250 28" style="enable-background:new 0 0 250 28;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#4FB0DB;}
-</style>
+ol>li {             text-align: justify;         }</style>
 <g>
 	<g>
 		<path id="gentle-wave" class="st0" d="M-50,26c30,0,45-10,88-9s45,7.1,88,6.1s45-7.1,88-6.1s45,10,88,9v44H-50V26z"/>
