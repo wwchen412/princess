@@ -27,6 +27,11 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/all.js"></script>
     <style>
+        .hidden-load {
+            display: none;
+            opacity: .5;
+        }
+        
         #wrap {
             background: 50% 50% url('img/bg.png');
             background-size: cover;
@@ -36,8 +41,8 @@
             padding: 20px;
         }
         
-        .hidden-load {
-            display: none;
+        .mainlogo {
+            width: 400px;
         }
         
         .form-area {
@@ -51,14 +56,10 @@
         .block {
             max-width: 400px;
             background-color: #fff;
-            padding: 20px;
+            padding: 25px;
             align-self: center;
             text-align: center;
             position: relative;
-        }
-        
-        .mainlogo {
-            width: 400px;
         }
         
         @media screen and (max-width:1090px) {
@@ -86,6 +87,7 @@
             #wrap {
                 position: relative;
                 min-height: 100vh;
+                overflow: hidden;
             }
             .block {
                 position: absolute;
@@ -97,9 +99,6 @@
                 top: 50%;
                 width: 400px;
                 transform: translateY(-50%) translateX(-50%);
-            }
-            .ieonly-overflow {
-                overflow: hidden;
             }
         }
     </style>
@@ -195,19 +194,17 @@
                 <img src="img/logo.svg" alt="" class="mainlogo">
             </a>
             <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light">
 
+
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-3 active">
-                        <a class="nav-link text-primary" href="#">活動辦法
-                                <span class="sr-only">(current)</span>
-                            </a>
+                        <a class="nav-link text-primary" href="#">活動辦法 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link text-primary" href="#">設施介紹</a>
@@ -223,26 +220,62 @@
         </nav>
 
     </header>
-    <div id="wrap" class="ieonly-overflow">
-        <div class="block rounded mx-2">
-            <h3 class="mb-3 text-primary">分享活動打卡</h3>
-            <!-- <h6>Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
-            <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6>
+    <div id="wrap">
+        <!-- login -->
+        <div class="block rounded">
+            <h3 class="mb-3 text-primary">登入後繼續參加活動</h3>
             <hr>
-            <img src="img/spot.jpg" alt="" class="img-fluid mb-3">
-            <div class="text-left" style="font-weight:100;">
-                <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 聲光水影秀</p>
-                <p style="font-size:.9rem;letter-spacing:1px;">每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。</p>
-            </div>
-            <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="goIndex()"> 
-                    <span aria-hidden="true" >×</span>
-                  </button>
-            <!-- <button class="btn btn-outline-secondary mb-2" onclick="goIndex()" style="opacity:.3;">重新開始</button> -->
-            <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
-
+            <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
+                <span aria-hidden="true" style="">×</span>
+              </button>
+            <button class="btn btn-outline-secondary p-1" style="font-size:10px;" onclick="history.back()"> 回上一頁</button>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-loginbtn mx-auto" style="color:#fff;">請先登入並繼續
+            </fb:login-button>
         </div>
+        <!-- form -->
+        <div class="form-area rounded border d-none" style="position:relative;">
+            <div class="container">
+                <div class="row">
+                    <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
+                                <span aria-hidden="true" style="">×</span>
+                              </button>
+                    <form class="container" id="needs-validation" novalidate action="share6.html">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-primary text-center">請填寫領獎聯絡方式</h3>
+                                <hr>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom01">姓名</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="姓名" value="" required>
 
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom02">暱稱</label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="您的暱稱" value="" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">電話</label>
+                                <input type="tel" class="form-control" id="validationCustom03" placeholder="電話" required>
 
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom04">E-Mail</label>
+                                <input type="email" class="form-control" id="validationCustom04" placeholder="Email" required>
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary mx-auto d-block px-5" type="submit">繼續</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -250,31 +283,30 @@
 
 
     <script>
-        document.getElementById('shareBtn').onclick = function() {
-            FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: 'https://wwchen412.github.io/princess/index2.html',
-                hashtag: '#盛世公主遊你夢想',
-            }, function(response) {
-                if (response && !response.error_message) {
-                    alert('分享成功！我們將於2017/11/13、2017/11/20公布得獎資料。');
-                    document.location.href = "index.html";
-                } else {
-                    alert('分享失敗！請再嘗試以完成活動。');
-                }
+        function SendForm() {
+            $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
+                "name": document.getElementById("validationCustom01").value,
+                "ni_name": document.getElementById("validationCustom02").value,
+                "phone": document.getElementById("validationCustom03").value,
+                "email": document.getElementById("validationCustom04").value
             });
         }
 
-        function goIndex() {
-            var go_index = confirm('確定要放棄當前進度並且重新開始嗎？');
-            if (go_index == true) {
-                document.location.href = "index.html";
-            } else {
-                return false;
-            }
-
-        }
+        (function() {
+            "use strict";
+            window.addEventListener("load", function() {
+                var form = document.getElementById("needs-validation");
+                form.addEventListener("submit", function(event) {
+                    if (form.checkValidity() == false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        SendForm();
+                    }
+                    form.classList.add("was-validated");
+                }, false);
+            }, false);
+        }());
     </script>
 </body>
 

@@ -813,19 +813,20 @@
         </div>
     </footer>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header  bg-primary text-light">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">蓮花水療
+
+                    </h5>
                     <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close" style="">
                         <span aria-hidden="true" style="display:block;">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" alt="" class="img-fluid rounded modal-imglink">
-                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
-                        <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
+                    <img src="img/spot5.jpg" alt="" class="img-fluid rounded modal-imglink">
+                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
                     </p>
                 </div>
                 <div class="container">
@@ -842,6 +843,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).on('load', function() {
+            $('#exampleModalLong').modal('show');
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- 讀取modal 內容 -->
     <script>

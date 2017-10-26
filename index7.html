@@ -813,19 +813,20 @@
         </div>
     </footer>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header  bg-primary text-light">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">海上豪華KTV
+
+                    </h5>
                     <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close" style="">
                         <span aria-hidden="true" style="display:block;">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" alt="" class="img-fluid rounded modal-imglink">
-                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
-                        <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
+                    <img src="img/spot6.jpg" alt="" class="img-fluid rounded modal-imglink">
+                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
                     </p>
                 </div>
                 <div class="container">
@@ -842,6 +843,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).on('load', function() {
+            $('#exampleModalLong').modal('show');
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- 讀取modal 內容 -->
     <script>

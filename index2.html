@@ -813,19 +813,18 @@
         </div>
     </footer>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header  bg-primary text-light">
-                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">聲光水影秀</h5>
                     <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close" style="">
                         <span aria-hidden="true" style="display:block;">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" alt="" class="img-fluid rounded modal-imglink">
-                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
-                        <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
+                    <img src="img/spot.jpg" alt="" class="img-fluid rounded modal-imglink">
+                    <p style="line-height:200%;font-size:.8rem;" class="modal-p">每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。
                     </p>
                 </div>
                 <div class="container">
@@ -842,6 +841,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).on('load', function() {
+            $('#exampleModalLong').modal('show');
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- 讀取modal 內容 -->
     <script>
