@@ -25,8 +25,10 @@
     <!-- .swiper -->
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="js/all.js"></script>
     <script src="js/smil.check.js"></script>
+    <script src="js/smil.user.js"></script>
+    <script src="js/all.js"></script>
+
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
@@ -191,11 +193,6 @@
         
         .use {
             animation-delay: -2s;
-        }
-        
-        .wave1 .parallax use {
-            animation-delay: -8s;
-            animation-duration: 14s
         }
         
         .wave2 .parallax use {
@@ -398,6 +395,15 @@
             filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
         }
         
+        @keyframes move-ie {
+            0% {
+                transform: translate(-10%, 10px)
+            }
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+        
         .icon {
             display: inline-block;
             width: 50px;
@@ -424,9 +430,18 @@
         (-ms-high-contrast: none) {
             .hero-img {
                 display: block !important;
+                overflow: hidden;
             }
             .swiper-slide {
                 width: calc(100% / 8);
+            }
+            .wave {
+                width: 112%;
+                animation: move-ie 3.5s linear alternate infinite;
+            }
+            .wave2 {
+                width: 115%;
+                animation: move-ie 5s linear alternate infinite;
             }
             .swiper-button-prev,
             .swiper-button-next {
@@ -449,24 +464,20 @@
             }
         }
     </style>
-    <!--[if IE]>
-        <style>
-            .d-flex{
-                display:block !important;
-            }
-        </style>
-    <![endif]-->
+
 </head>
 
 <body class="">
     <header>
         <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
+
             <a href="index.html">
                 <img src="img/logo.svg" alt="" class="mainlogo">
             </a>
             <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
+
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -474,7 +485,9 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-3 active">
-                        <a class="nav-link text-primary" href="#">活動辦法 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-primary" href="#">活動辦法
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link text-primary" href="#">設施介紹</a>
@@ -516,11 +529,11 @@
                                 58-6 88-6 
                                 58 6 88 6
                                 v44h-352z" />
-                        </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
-                                   
-                                </g>
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
                             </svg>
                     </div>
                     <div class="wave1">
@@ -547,13 +560,14 @@
                                         58 3 88 3 
                                         58-3 88-3 
                                         58 3 88 3
+ss
                                         v44h-352z" />
-                                </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
-                                   
-                                </g>
-                            </svg>
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#00b2e0" />
+
+                            </g>
+                        </svg>
                     </div>
                     <!-- 島 -->
                     <div class="iland">
@@ -578,7 +592,8 @@
                     <!-- 刷卡 -->
                     <div class="book-now">
                         <div class="text-light">
-                            <img src="img/credit-card.png" alt="" class="mb-2 img-fluid"><br> 立即預約公主
+                            <img src="img/credit-card.png" alt="" class="mb-2 img-fluid">
+                            <br> 立即預約公主
                         </div>
                     </div>
                     <!-- 打卡趣 展開 -->
@@ -615,16 +630,21 @@
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot2.jpg" data-title="星空露天電影院" data-p="露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic2.jpg" class="mx-auto" alt="">星空露天電影院</a>
+
                             </div>
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot7.jpg" data-title="豪華免稅購物" data-p="盛世公主號擁有全球最大的海上免稅購物空間，由世界知名精品如BVLGARI、Cartier、Chopard等奢侈品牌進駐，各盡情享受血拚快感。
                                 
+
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic3.jpg" class="mx-auto" alt="">豪華免稅購物</a>
+
                             </div>
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot4.jpg" data-title="米其林水準佳餚" data-p="被譽為『老饕最愛』而享譽全球的公主遊輪，尤其盛世公主號更是唯一擁有兩間餐廳由米其林星級主廚全新設計的佳餚美饌。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">米其林水準佳餚</a>
+                                " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic1.png" class="mx-auto" alt="">米其林水準佳餚</a>
                             </div>
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot5.jpg" data-title="蓮花水療" data-p="榮獲《旅遊週刊》麥哲倫金獎。完整的海上芳療提供針灸、減脂、精油按摩、熱石療法、雙人按摩等服務，讓Spa成為您最極致的享受，體驗從頭到腳的滋潤呵護；更配有多功能療癒房，讓身心靈一併放鬆。
@@ -633,11 +653,14 @@
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot3.jpg" data-title="公主劇院" data-p="被譽為七大洋最強表演廳的公主劇院，每晚為賓客奉上別具風格的精采演出，尤其由世界級團隊獻上的拉斯維加斯風情歌舞秀，以精心編排的原創曲目、配以精美服飾和先進的海上多媒體舞台技術，絕不能錯過的最佳節目。
                                 " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">公主劇院</a>
+
                             </div>
                             <div class="text-center swiper-slide">
                                 <a href="" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot6.jpg" data-title="海上豪華ktv" data-p="擁有6間私人KTV包廂，每間空間擁有專屬色調與主題裝飾，備有舒適沙發、高品質音響系統及大型桌面觸控點歌系統，備有最新最流行的中英文歌曲，同時提供各類小食酒水服務。讓你在海上盡情高歌。
                                 
-                                " data-link="form.html"><img src="img/href.png" alt="" class="d-block mx-auto"> <img src="img/hoverpic1.png" class="mx-auto" alt="">海上豪華ktv</a>
+                                " data-link="form.html">
+                                    <img src="img/href.png" alt="" class="d-block mx-auto">
+                                    <img src="img/hoverpic1.png" class="mx-auto" alt="">海上豪華ktv</a>
                             </div>
                         </div>
                         <div class="swiper-button-prev swiper-button-disabled"></div>
@@ -657,34 +680,42 @@
                 <div class="col-12 py-3">
                     <div class="wave3">
                         <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                                <defs>
-                                    <path id="gentle-wave" d="M-150 44c30 0 
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c30 0 
                                     58-6 88-6s
                                     58 6 88 6 
                                     58-6 88-6 
                                     58 6 88 6
-                                v44h-352z" />
-                                </defs>
-                                <g class="parallax">
-                                    <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
-                                   
-                                </g>
+
+                        <svg class=" editorial " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " viewBox="0 24 150 28 "
+                            preserveAspectRatio="none ">
+                            <defs>
+                                <path id="gentle-wave " d="M-150 44c30 0 58-10 88-10s 58 10 88 10 58-10 88-10 58 10 88 10>>>>>>> d6e0e7f84a893ac40a7b5dcd63f8f7e02a8ba020 v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005EA1" />
+
+                            </g>
                             </svg>
                     </div>
                     <h2 class="text-light text-center big-title">是你，讓我感到輕鬆奢華</h2>
-                    <h4 class="text-light text-center py-2" style="line-height:200%;">慶祝盛世公主號首次來台航行旅遊<br> 我們將舉辦一系列活動邀您一同共襄盛舉，來體會盛世公主，遊你夢想的最佳
+                    <h4 class="text-light text-center py-2" style="line-height:200%;">慶祝盛世公主號首次來台航行旅遊
+                        <br> 我們將舉辦一系列活動邀您一同共襄盛舉，來體會盛世公主，遊你夢想的最佳
                     </h4>
                 </div>
             </div>
         </div>
     </section>
     <section class="section4 py-3">
-        <div class="white-wave"><img src="img/white-wave.svg" alt="" class="d-block"></div>
+        <div class="white-wave">
+            <img src="img/white-wave.svg" alt="" class="d-block">
+        </div>
         <div class="container">
             <!--  活動一 -->
             <div class="row my-3">
                 <div class="col-12">
-                    <h3 class="text-main"><img src="img/location.svg" alt="" class="icon mr-3 mb-3">夢想公主．打卡趣 </h3>
+                    <h3 class="text-main">
+                        <img src="img/location.svg" alt="" class="icon mr-3 mb-3">夢想公主．打卡趣 </h3>
                 </div>
                 <div class="col-xs-12 col-sm-6">
 
@@ -716,7 +747,8 @@
             <!-- 活動二 -->
             <div class="row my-3 mt-5">
                 <div class="col-12">
-                    <h3 class="text-main"><img src="img/movie.svg" alt="" class="icon mr-3 mb-3">我的公主．夢想時刻 </h3>
+                    <h3 class="text-main">
+                        <img src="img/movie.svg" alt="" class="icon mr-3 mb-3">我的公主．夢想時刻 </h3>
                 </div>
                 <div class="col-xs-12 col-sm-6">
 
@@ -782,9 +814,9 @@
             <div class="modal-content">
                 <div class="modal-header  bg-primary text-light">
                     <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close" style=""> 
-                <span aria-hidden="true" style="display:block;">&times;</span>
-              </button>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close" style="">
+                        <span aria-hidden="true" style="display:block;">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <img src="" alt="" class="img-fluid rounded modal-imglink">
@@ -795,7 +827,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a href="" class="btn btn-primary mx-auto mb-2 px-5 modal-link"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</a>
+                            <a href="" class="btn btn-primary mx-auto mb-2 px-5 modal-link">
+                                <img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</a>
                         </div>
                     </div>
                 </div>
