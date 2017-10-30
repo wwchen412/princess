@@ -1,0 +1,458 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.text-main {
+    color: #2078bc;
+}
+
+.text-primary {
+    color: #2078bc !important;
+}
+
+.bg-primary {
+    background-color: #2078bc !important;
+}
+
+.mainlogo {
+    width: 400px;
+}
+
+.hero-img {
+    background: url('../img/sky.png');
+    background-size: cover;
+    /* height: calc(100vh - 90px); */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slogan {
+    position: relative;
+    transform: translateX(10px);
+    z-index: 1;
+}
+
+.ship {
+    margin-top: -10%;
+    text-align: center;
+    /* transform: translateY(40%); */
+    animation: ship 1.5s alternate infinite linear;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes ship {
+    0% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.cloud {
+    position: absolute;
+    left: 0vw;
+    z-index: 0;
+}
+
+.cloud img {
+    width: 200px;
+}
+
+.cloud2 img {
+    width: 250px;
+}
+
+.cloud3 img {
+    width: 300px;
+}
+
+.cloud1 {
+    top: 30%;
+    animation: cloud 35s infinite linear;
+}
+
+.cloud2 {
+    top: 60px;
+    animation: cloud 40s -3s infinite linear;
+}
+
+.cloud3 {
+    top: 50%;
+    animation: cloud 44s -5s infinite linear;
+}
+
+.cloud4 {
+    top: 40%;
+    animation: cloud 42s -13s infinite linear;
+}
+
+.cloud5 {
+    top: 52%;
+    animation: cloud 47s -7.5s infinite linear;
+}
+
+.cloud6 {
+    top: 38%;
+    animation: cloud 30s -10s infinite linear;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(-20vw);
+    }
+    100% {
+        transform: translateX(120vw);
+    }
+}
+
+.wave {
+    width: 100%;
+    position: absolute;
+    bottom: 57px;
+    filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+    z-index: 2;
+}
+
+.wave1 {
+    width: 100%;
+    position: absolute;
+    bottom: 95px;
+    filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+    z-index: 0;
+}
+
+.hero-img:before {
+    content: '';
+    width: 100%;
+    height: 87px;
+    position: absolute;
+    bottom: 0;
+    background-color: #2078bc;
+    z-index: 3;
+}
+
+.wave2 {
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    z-index: 4;
+    filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+}
+
+.iland {
+    position: absolute;
+    left: 10px;
+    bottom: 35px;
+    z-index: 3;
+}
+
+.editorial {
+    display: block;
+    width: 100%;
+    height: 10em;
+    max-height: 100vh;
+    margin: 0;
+}
+
+.parallax use {
+    animation: move-forever 12s linear infinite;
+}
+
+.use {
+    animation-delay: -2s;
+}
+
+.wave1 .parallax use {
+    animation-delay: -8s;
+    animation-duration: 14s
+}
+
+.wave2 .parallax use {
+    animation-delay: -5s;
+    animation-duration: 15s
+}
+
+.wave4 .parallax use {
+    animation-delay: -5s;
+    animation-duration: 10s
+}
+
+.use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s
+}
+
+.wave3 {
+    width: 100%;
+    position: absolute;
+    top: -115px;
+    left: 0;
+    pointer-events: none;
+    filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+}
+
+.book-now {
+    position: absolute;
+    right: 20px;
+    bottom: 70px;
+    z-index: 5;
+}
+
+.book-now-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 70px;
+    z-index: 5;
+}
+
+.book-now:before {
+    content: '';
+    display: block;
+    width: 300%;
+    position: absolute;
+    left: -300%;
+    border-bottom: 2px dashed #fff;
+    top: 55%;
+}
+
+.book-now img:hover,
+.book-now a:hover {
+    filter: drop-shadow(0px 0px 15px rgba(255, 233, 255, .6));
+}
+
+.section4 p {
+    text-align: justify;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate(-90px, 0%)
+    }
+    100% {
+        transform: translate(85px, 0%)
+    }
+}
+
+@media screen and (max-width:1090px) {
+    .navbar {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mainlogo {
+        max-width: 220px;
+    }
+    .cloud2 {
+        top: 60px;
+        animation: cloud 20s -3s infinite linear;
+    }
+    .cloud3 {
+        top: 50%;
+        animation: cloud 24s -5s infinite linear;
+    }
+    .cloud4 {
+        top: 40%;
+        z-index: 2;
+        animation: cloud 22s -13s infinite linear;
+    }
+    .cloud5 {
+        top: 52%;
+        animation: cloud 17s -7.5s infinite linear;
+    }
+    .cloud6 {
+        top: 38%;
+        z-index: 2;
+        animation: cloud 20s -10s infinite linear;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    .wave {
+        bottom: 95px;
+    }
+    .hero-img:before {
+        height: 95px;
+    }
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 6px;
+    }
+    .editorial {
+        height: 5em;
+    }
+    .ship img {
+        bottom: 70px;
+    }
+    .wave3 {
+        top: -80px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .ship {
+        margin-top: -30%;
+        text-align: center;
+        /* transform: translateY(40%); */
+        animation: ship 2s alternate infinite linear;
+    }
+    .wave {
+        bottom: 30px;
+    }
+    .wave1 {
+        bottom: 40px;
+    }
+    .hero-img:before {
+        height: 30px;
+    }
+    .iland {
+        max-width: 150px;
+        bottom: 10px;
+        left: 0;
+    }
+    .book-now {
+        position: absolute;
+        right: 5px;
+        bottom: 0px;
+        z-index: 5;
+    }
+    .book-now img {
+        width: 80px;
+    }
+    .book-now:before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        border-bottom: 2px dashed #fff;
+        top: 55%;
+    }
+}
+
+.swiper-container {
+    padding: 0 30px;
+}
+
+.big-title {
+    padding-top: 50px;
+    letter-spacing: 5px;
+}
+
+.section3 {
+    background: #005EA1;
+    padding-bottom: 100px;
+}
+
+.select-share {
+    white-space: nowrap;
+}
+
+.select-share>div {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+}
+
+.section4 {
+    position: relative;
+}
+
+.white-wave {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    filter: drop-shadow(0px -6px 3px rgba(0, 0, 0, .1));
+}
+
+@keyframes move-ie {
+    0% {
+        transform: translate(-10%, 10px)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+}
+
+
+/* modal */
+
+.modal-content {
+    border: 0;
+}
+
+.hoverChange img:nth-child(2) {
+    display: none;
+}
+
+.hoverChange:hover img:nth-child(2) {
+    display: block;
+}
+
+.hoverChange:hover img:nth-child(1) {
+    display: none !important;
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .hero-img {
+        display: block !important;
+        overflow: hidden;
+    }
+    .swiper-slide {
+        width: calc(100% / 8);
+    }
+    .wave {
+        width: 112%;
+        animation: move-ie 3.5s linear alternate infinite;
+    }
+    .wave2 {
+        width: 115%;
+        animation: move-ie 5s linear alternate infinite;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+    .cloud {
+        animation: none !important;
+    }
+    .cloud2 {
+        transform: translateX(50%);
+    }
+    .cloud3 {
+        transform: translateX(80vw);
+    }
+    .cloud4 {
+        transform: translateX(70vw);
+    }
+    .modal-link {
+        max-width: 150px;
+    }
+}
+
+ol>li {
+    text-align: justify;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}

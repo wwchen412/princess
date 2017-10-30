@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 250 28" style="enable-background:new 0 0 250 28;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#4FB0DB;}
-ol>li {             text-align: justify;         }</style>
-<g>
-	<g>
-		<path id="gentle-wave" class="st0" d="M-50,26c30,0,45-10,88-9s45,7.1,88,6.1s45-7.1,88-6.1s45,10,88,9v44H-50V26z"/>
-	</g>
-</g>
-</svg>
+<svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                            <defs>
+                                <path id="gentle-wave" d="M-150 44c50 0 
+                                58-3 88-3s
+                                58 3 88 3 
+                                58-3 88-3 
+                                58 3 88 3
+                                v44h-352z" />
+                            </defs>
+                            <g class="parallax">
+                                <use xlink:href="#gentle-wave" x="50" y="0" fill="#2078bc" />
+
+                            </g>
+                            </svg>
