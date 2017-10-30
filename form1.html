@@ -15,7 +15,9 @@
     <meta property="og:image" content="img/ship.png" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">    
+     <link rel="stylesheet" href="css/index.css">
+     <link rel="stylesheet" href="css/form.css">
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- jQuery JS 3.1.0 -->
@@ -26,7 +28,7 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/all.js"></script>
-    <style>
+    <!-- <style>
         .hidden-load {
             display: none;
             opacity: .5;
@@ -51,6 +53,7 @@
             padding: 20px;
             align-self: center;
             margin: 0 15px;
+            position: relative;
         }
         
         .block {
@@ -105,7 +108,7 @@
         ol>li {
             text-align: justify;
         }
-    </style>
+    </style> -->
 </head>
 
 <body class="hidden-load">
@@ -192,7 +195,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <header>
-        <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#316EB1;">
+        <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#2078bc">
 
             <a href="index.html">
                 <img src="img/logo.svg" alt="" class="mainlogo">
@@ -200,23 +203,52 @@
             <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
+
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light">
 
-
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item mx-3 active">
-                        <a class="nav-link text-primary" href="#">活動辦法 <span class="sr-only">(current)</span></a>
+                    <li class="nav-item text-center mx-3 active">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    活動辦法 <span class="sr-only">(current)</span>
+                                    </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm book-now-js" href="#">盛世公主．打卡趣</a>
+                                <a class="dropdown-item text-primary btn-sm" href="#">公主時刻．遊你夢想</a>
+                                <a class="dropdown-item text-primary btn-sm" href="#">得獎公告</a>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link text-primary" href="#">設施介紹</a>
+                    <li class="nav-item text-center mx-3">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            盛世公主號 <span class="sr-only">(current)</span>
+                                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/">船隻介紹</a>
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/cabins/">艙房介紹</a>
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/food-and-dining/">艙房介紹</a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link text-primary" href="#">行程簡介</a>
+                    <li class="nav-item text-center mx-3">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                2018出發航程 <span class="sr-only">(current)</span>
+                                    </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/">立即了解</a>
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/downloads/Majestic_Princess_2018_Brochure_PrincessCruisesTaiwan_20171012.pdf" download="http://www.princesscruises.com.tw/downloads/Majestic_Princess_2018_Brochure_PrincessCruisesTaiwan_20171012.pdf">下載行程手冊</a>
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-item mx-3">
+                    <li class="nav-item text-center mx-3">
                         <a class="nav-link text-primary" href="http://www.princesscruises.com.tw/taiwandeparture">早鳥優惠</a>
                     </li>
                 </ul>
@@ -237,7 +269,7 @@
             </fb:login-button>
         </div>
         <!-- form -->
-        <div class="form-area rounded border d-none" style="position:relative;">
+        <div class="form-area rounded border d-none"   >
             <div class="container">
                 <div class="row">
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 

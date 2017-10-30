@@ -417,6 +417,12 @@ a {
         display: block !important;
         overflow: hidden;
     }
+    .mainlogo{
+        height: 20px;
+    }
+    .modal-body{
+        max-height: 500px;
+    }
     .swiper-slide {
         width: calc(100% / 8);
     }

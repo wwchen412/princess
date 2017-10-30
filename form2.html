@@ -15,7 +15,9 @@
     <meta property="og:image" content="img/ship.png" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">     
+    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/form.css">
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- jQuery JS 3.1.0 -->
@@ -26,86 +28,7 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/all.js"></script>
-    <style>
-        .hidden-load {
-            display: none;
-            opacity: .5;
-        }
-        
-        #wrap {
-            background: 50% 50% url('img/bg.png');
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            min-height: calc(100vh - 105px);
-            padding: 20px;
-        }
-        
-        .mainlogo {
-            width: 400px;
-        }
-        
-        .form-area {
-            max-width: 400px;
-            background-color: rgba(255, 255, 255, .95);
-            padding: 20px;
-            align-self: center;
-            margin: 0 15px;
-        }
-        
-        .block {
-            max-width: 400px;
-            background-color: #fff;
-            padding: 25px;
-            align-self: center;
-            text-align: center;
-            position: relative;
-        }
-        
-        @media screen and (max-width:1090px) {
-            .navbar {
-                padding: 0;
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            .mainlogo {
-                max-width: 220px;
-            }
-            #wrap {
-                min-height: calc(100vh - 49px);
-            }
-            .navbar-toggler {
-                position: absolute;
-                right: 10px;
-                top: 6px;
-            }
-        }
-        
-        @media screen and (-ms-high-contrast: active),
-        (-ms-high-contrast: none) {
-            #wrap {
-                position: relative;
-                min-height: 100vh;
-                overflow: hidden;
-            }
-            .block {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%) translateX(-50%);
-            }
-            .form-area {
-                position: absolute;
-                top: 50%;
-                width: 400px;
-                transform: translateY(-50%) translateX(-50%);
-            }
-        }
-        
-        ol>li {
-            text-align: justify;
-        }
-    </style>
+
 </head>
 
 <body class="hidden-load">
@@ -237,7 +160,7 @@
             </fb:login-button>
         </div>
         <!-- form -->
-        <div class="form-area rounded border d-none" style="position:relative;">
+        <div class="form-area rounded border d-none"   >
             <div class="container">
                 <div class="row">
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
