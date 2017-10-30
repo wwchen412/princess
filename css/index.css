@@ -7,15 +7,21 @@ a {
 }
 
 .text-main {
-    color: #2078bc;
+    color: #0E6EB8;
 }
 
 .text-primary {
-    color: #2078bc !important;
+    color: #0E6EB8 !important;
 }
 
 .bg-primary {
     background-color: #2078bc !important;
+}
+
+.navbar-nav ul li,
+.navbar-nav ul li .dropdown a,
+.navbar-nav ul li a {
+    cursor: pointer !important;
 }
 
 .mainlogo {
@@ -410,9 +416,10 @@ a {
 .hoverChange:hover img:nth-child(1) {
     display: none !important;
 }
+
 @supports (-ms-ime-align: auto) {
-    .ship{
-        margin-top:0; 
+    .ship {
+        margin-top: 0;
     }
     .wave {
         width: 112%;
@@ -422,17 +429,18 @@ a {
         width: 115%;
         animation: move-ie 5s linear alternate infinite;
     }
-  }
+}
+
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
     .hero-img {
         display: block !important;
         overflow: hidden;
     }
-    .mainlogo{
+    .mainlogo {
         height: 20px;
     }
-    .modal-body{
+    .modal-body {
         max-height: 500px;
     }
     .swiper-slide {
