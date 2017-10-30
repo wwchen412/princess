@@ -410,7 +410,19 @@ a {
 .hoverChange:hover img:nth-child(1) {
     display: none !important;
 }
-
+@supports (-ms-ime-align: auto) {
+    .ship{
+        margin-top:0; 
+    }
+    .wave {
+        width: 112%;
+        animation: move-ie 3.5s linear alternate infinite;
+    }
+    .wave2 {
+        width: 115%;
+        animation: move-ie 5s linear alternate infinite;
+    }
+  }
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
     .hero-img {
