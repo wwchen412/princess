@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
-    font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-family: 'Noto Sans TC', "Helvetica Neue", Helvetica, "PingFang TC", Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
 a {
@@ -10,7 +11,8 @@ a {
     color: #0E6EB8;
 }
 
-.text-primary {
+.text-primary,
+.text-primary:hover {
     color: #0E6EB8 !important;
 }
 
@@ -18,10 +20,30 @@ a {
     background-color: #2078bc !important;
 }
 
+.navbar {
+    padding: 0;
+}
+
 .navbar-nav ul li,
 .navbar-nav ul li .dropdown a,
 .navbar-nav ul li a {
     cursor: pointer !important;
+}
+
+.dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    border-radius: 0;
+}
+
+.dropdown-menu a:focus,
+.dropdown-menu a:hover {
+    background: #0062cc !important;
+    color: #fff !important;
 }
 
 .mainlogo {
@@ -254,6 +276,9 @@ a {
 }
 
 @media screen and (max-width:768px) {
+    .dropdown-menu {
+        text-align: center;
+    }
     .mainlogo {
         max-width: 220px;
     }
