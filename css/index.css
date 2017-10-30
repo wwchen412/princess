@@ -16,6 +16,11 @@ a {
     color: #0E6EB8 !important;
 }
 
+a.text-primary,
+a.text-primary:hover {
+    color: #0E6EB8 !important;
+}
+
 .bg-primary {
     background-color: #2078bc !important;
 }
