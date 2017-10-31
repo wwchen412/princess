@@ -476,6 +476,9 @@ a.text-primary:hover {
         display: block;
         margin: 0 auto;
     }
+    .white-wave {
+        width: 100%;
+    }
     .hero-img {
         display: block !important;
         overflow: hidden;
