@@ -37,6 +37,7 @@ a.text-primary:hover {
 
 .navbar-nav .dropdown,
 .navbar-nav .dropdown a {
+    font-size: 1rem;
     height: 100%;
 }
 
@@ -344,6 +345,10 @@ a.text-primary:hover {
 }
 
 @media screen and (max-width:576px) {
+    .navbar-nav .dropdown,
+    .navbar-nav .dropdown a {
+        font-size: .9rem;
+    }
     .ship {
         margin-top: -30%;
         text-align: center;
