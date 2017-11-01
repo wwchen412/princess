@@ -345,6 +345,12 @@ a.text-primary:hover {
 }
 
 @media screen and (max-width:576px) {
+    .book-now-btn {
+        bottom: 20px;
+    }
+    .book-now {
+        display: none;
+    }
     .navbar-nav .dropdown,
     .navbar-nav .dropdown a {
         font-size: .9rem;
