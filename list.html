@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <title>盛世公主 海上天空步道</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- fb meta -->
+    <meta property="og:url" content="http://princesscruises.com.tw/event/mj/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="盛世公主 海上天空步道" />
+    <meta property="og:description" content="盛世公主遊你夢想，即日起至11/15(三)，選出喜愛的盛世公主號特色設施，Tag一位朋友並寫下為什麼想在這裡打卡分享，同時Hashtag #盛世公主遊你夢想，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。
+    " />
+    <meta property="og:image" content="img/ship.png" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery JS 3.1.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/all.js"></script>
+    <script>
+        (scupioconv = window.scupioconv || []).push({
+            bwp: 1160,
+            bwpid: 'action'
+        });
+    </script>
+    <script async src="//img.scupio.com/js/conv.js"></script>
+
+    <script>
+        (window._bwtm = window._bwtm || []).push({
+            "mid": 249,
+            "pid": "action"
+        });
+    </script>
+    <script async src="//rec.scupio.com/recweb/js/rec.js"></script>
+    <style>
+        .awards {
+            background-color: #fff;
+            width: 100%;
+            padding: 20px;
+            font-size: 0;
+        }
+        
+        .awards li {
+            padding: 0px 10px;
+            display: inline-block;
+        }
+        
+        .awards li p {
+            font-size: 1rem;
+            display: inline-block;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body class="hidden-load">
+    <script>
+        // 檢查登入狀態
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+                document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+            }
+        }
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+        // fbinit
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '256834864809662',
+                xfbml: true,
+                version: 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // fb登入
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+        // 登入後動作
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                document.querySelector('.form-area').classList.remove("d-none");
+                document.querySelector('.block').classList.add('d-none');
+                document.querySelector('#validationCustom02').value = response.name;
+
+
+            });
+            FB.api('/me', {
+                fields: 'name,email'
+            }, function(response) {
+
+                document.querySelector('#validationCustom04').value = response.email;
+            });
+        }
+    </script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10&appId=256834864809662";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header>
+        <div class="brand justify-content-center d-flex p-3 navbar-dark" style="background-color:#2078bc">
+
+            <a href="http://www.princesscruises.com.tw/">
+                <img src="img/logo.svg" alt="" class="mainlogo">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-center mx-3 active">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                活動辦法 <span class="sr-only">(current)</span>
+                                                </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm book-now-js" href="#">盛世公主．打卡趣</a>
+                                <a class="dropdown-item text-primary btn-sm" href="#">公主時刻．遊你夢想</a>
+                                <a class="dropdown-item text-primary btn-sm" href="#">得獎公告</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item text-center mx-3">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                                                        盛世公主號 <span class="sr-only">(current)</span>
+                                                        </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/">公主船隊</a>
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/cabins/">公主艙房</a>
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/ships/Majestic/food-and-dining/">公主饗宴</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item text-center mx-3">
+                        <div class="dropdown show">
+                            <a class="btn  dropdown-toggle nav-link text-primary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                                            2018出發航程 <span class="sr-only">(current)</span>
+                                                </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item text-primary btn-sm" href="http://www.princesscruises.com.tw/taiwandeparture/">立即了解</a>
+                                <a class="dropdown-item text-primary btn-sm" href="javascript:download();">下載行程手冊</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item text-center mx-3">
+                        <a class="nav-link text-primary" href="http://www.princesscruises.com.tw/taiwandeparture">早鳥優惠</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <div id="wrap">
+        <div class="awards">
+            <h2 class="text-center mb-4">得獎名單</h2>
+            <ul style="list-style:none">
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+                <li>
+                    <p>姓名：王X明</p>
+                    <p>暱稱：王陽明</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function SendForm() {
+            $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
+                "name": document.getElementById("validationCustom01").value,
+                "ni_name": document.getElementById("validationCustom02").value,
+                "phone": document.getElementById("validationCustom03").value,
+                "email": document.getElementById("validationCustom04").value
+            });
+        }
+
+        (function() {
+            "use strict";
+            window.addEventListener("load", function() {
+                var form = document.getElementById("needs-validation");
+                form.addEventListener("submit", function(event) {
+                    if (form.checkValidity() == false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        SendForm();
+                    }
+                    form.classList.add("was-validated");
+                }, false);
+            }, false);
+        }());
+    </script>
+</body>
+
+</html>
