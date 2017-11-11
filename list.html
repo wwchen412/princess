@@ -55,6 +55,7 @@
         .awards li {
             padding: 0px 10px;
             display: inline-block;
+            font-size: 1rem;
         }
         
         .awards li p {
@@ -332,8 +333,23 @@
         }());
 
         var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://github.com/wwchen412/princess/list.json', true)
+        xhr.open('get', 'https://wwchen412.github.io/princess/list.json', true)
         xhr.send(null);
+
+        var list_block = document.getElementById('awards-list');
+        list_block.innerHTML = '';
+
+        xhr.onload = function() {
+
+            var str = JSON.parse(xhr.responseText);
+            var len = str.length
+            for (i = 0; i < len; i++) {
+                var list = document.createElement('li');
+                list_block.appendChild(list);
+                list.textContent = str[i].name;
+            }
+
+        }
     </script>
 </body>
 
