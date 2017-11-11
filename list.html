@@ -330,6 +330,10 @@
                 }, false);
             }, false);
         }());
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://github.com/wwchen412/princess/list.json', true)
+        xhr.send(null);
     </script>
 </body>
 

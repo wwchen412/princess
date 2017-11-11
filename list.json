@@ -1,316 +1,301 @@
 [{
-    "Name": "張Ｏ婉",
-    "Nickname": "Wankao Chang"
+    "name": "張Ｏ婉",
+    "nickname": "Wankao Chang"
 }, {
-    "Name": "蔡Ｏ蒼",
-    "Nickname": "蔡錦蒼"
+    "name": "蔡Ｏ蒼",
+    "nickname": "蔡錦蒼"
 }, {
-    "Name": "吳Ｏ綺",
-    "Nickname": "吳苙綺"
+    "name": "吳Ｏ綺",
+    "nickname": "吳苙綺"
 }, {
-    "Name": "焦Ｏ珊",
-    "Nickname": "米妮珊"
+    "name": "焦Ｏ珊",
+    "nickname": "米妮珊"
 }, {
-    "Name": "黃Ｏ薇",
-    "Nickname": "Vilma Huang"
+    "name": "黃Ｏ薇",
+    "nickname": "Vilma Huang"
 }, {
-    "Name": "楊Ｏ凰",
-    "Nickname": "喵喵凰"
+    "name": "楊Ｏ凰",
+    "nickname": "喵喵凰"
 }, {
-    "Name": "吳Ｏ娟",
-    "Nickname": "Juan Wu"
+    "name": "吳Ｏ娟",
+    "nickname": "Juan Wu"
 }, {
-    "Name": "陳Ｏ郁",
-    "Nickname": "Hsin Yu Chen"
+    "name": "陳Ｏ郁",
+    "nickname": "Hsin Yu Chen"
 }, {
-    "Name": "湯Ｏ琴",
-    "Nickname": "玉琴"
+    "name": "湯Ｏ琴",
+    "nickname": "玉琴"
 }, {
-    "Name": "曹Ｏ本",
-    "Nickname": "曹昌本"
+    "name": "曹Ｏ本",
+    "nickname": "曹昌本"
 }, {
-    "Name": "黃Ｏ麟",
-    "Nickname": "A Lin Huang"
+    "name": "黃Ｏ麟",
+    "nickname": "A Lin Huang"
 }, {
-    "Name": "戴Ｏ龍",
-    "Nickname": "戴得龍"
+    "name": "戴Ｏ龍",
+    "nickname": "戴得龍"
 }, {
-    "Name": "許Ｏ卿",
-    "Nickname": "ching"
+    "name": "許Ｏ卿",
+    "nickname": "ching"
 }, {
-    "Name": "周Ｏ妮",
-    "Nickname": "周金妮"
+    "name": "周Ｏ妮",
+    "nickname": "周金妮"
 }, {
-    "Name": "白Ｏ麗",
-    "Nickname": "白淑麗"
+    "name": "白Ｏ麗",
+    "nickname": "白淑麗"
 }, {
-    "Name": "周Ｏ玄",
-    "Nickname": "周士玄"
+    "name": "周Ｏ玄",
+    "nickname": "周士玄"
 }, {
-    "Name": "唐Ｏ函",
-    "Nickname": "Chi-han Tang"
+    "name": "唐Ｏ函",
+    "nickname": "Chi-han Tang"
 }, {
-    "Name": "洪Ｏ琳",
-    "Nickname": "Wei-Lin Hung"
+    "name": "洪Ｏ琳",
+    "nickname": "Wei-Lin Hung"
 }, {
-    "Name": "孫Ｏ嵐",
-    "Nickname": "Melody Sun"
+    "name": "孫Ｏ嵐",
+    "nickname": "Melody Sun"
 }, {
-    "Name": "許Ｏ卿",
-    "Nickname": "ching"
+    "name": "許Ｏ卿",
+    "nickname": "ching"
 }, {
-    "Name": "吳Ｏ欣",
-    "Nickname": "Cindy Wu"
+    "name": "吳Ｏ欣",
+    "nickname": "Cindy Wu"
 }, {
-    "Name": "周Ｏ伶",
-    "Nickname": "Shaodw Chou"
+    "name": "周Ｏ伶",
+    "nickname": "Shaodw Chou"
 }, {
-    "Name": "陳Ｏ貞",
-    "Nickname": "陳秀貞"
+    "name": "陳Ｏ貞",
+    "nickname": "陳秀貞"
 }, {
-    "Name": "沈Ｏ慧",
-    "Nickname": "Evytte Shen"
+    "name": "沈Ｏ慧",
+    "nickname": "Evytte Shen"
 }, {
-    "Name": "徐Ｏ榮",
-    "Nickname": "徐志榮"
+    "name": "徐Ｏ榮",
+    "nickname": "徐志榮"
 }, {
-    "Name": "董Ｏ偉",
-    "Nickname": "董安森"
+    "name": "董Ｏ偉",
+    "nickname": "董安森"
 }, {
-    "Name": "呂Ｏ毓",
-    "Nickname": "小毓"
+    "name": "呂Ｏ毓",
+    "nickname": "小毓"
 }, {
-    "Name": "紀Ｏ虹",
-    "Nickname": "Emily Chi"
+    "name": "紀Ｏ虹",
+    "nickname": "Emily Chi"
 }, {
-    "Name": "陳Ｏ伶",
-    "Nickname": "Chen Chia Ling"
+    "name": "陳Ｏ伶",
+    "nickname": "Chen Chia Ling"
 }, {
-    "Name": "凌Ｏ棟",
-    "Nickname": "Gaffey Lin"
+    "name": "凌Ｏ棟",
+    "nickname": "Gaffey Lin"
 }, {
-    "Name": "陳Ｏ貞",
-    "Nickname": "陳秀貞"
+    "name": "陳Ｏ貞",
+    "nickname": "陳秀貞"
 }, {
-    "Name": "曾Ｏ華",
-    "Nickname": "曾小花"
+    "name": "曾Ｏ華",
+    "nickname": "曾小花"
 }, {
-    "Name": "王Ｏ煌",
-    "Nickname": "Nick Wang"
+    "name": "王Ｏ煌",
+    "nickname": "Nick Wang"
 }, {
-    "Name": "紀Ｏ如",
-    "Nickname": "露小西"
+    "name": "紀Ｏ如",
+    "nickname": "露小西"
 }, {
-    "Name": "陳Ｏ成",
-    "Nickname": "陳建成"
+    "name": "陳Ｏ成",
+    "nickname": "陳建成"
 }, {
-    "Name": "杜Ｏ菁",
-    "Nickname": "杜婉菁"
+    "name": "杜Ｏ菁",
+    "nickname": "杜婉菁"
 }, {
-    "Name": "李Ｏ薇",
-    "Nickname": "Silvia Lee"
+    "name": "李Ｏ薇",
+    "nickname": "Silvia Lee"
 }, {
-    "Name": "李Ｏ騫",
-    "Nickname": "佳佳 Anita"
+    "name": "李Ｏ騫",
+    "nickname": "佳佳 Anita"
 }, {
-    "Name": "任Ｏ琳",
-    "Nickname": "Darla Jylpig Ren"
+    "name": "任Ｏ琳",
+    "nickname": "Darla Jylpig Ren"
 }, {
-    "Name": "莊Ｏ婷",
-    "Nickname": "Wenting Chuang"
+    "name": "莊Ｏ婷",
+    "nickname": "Wenting Chuang"
 }, {
-    "Name": "陳Ｏ穎",
-    "Nickname": "御灰空"
+    "name": "陳Ｏ穎",
+    "nickname": "御灰空"
 }, {
-    "Name": "陳Ｏ琪",
-    "Nickname": "Flora AB"
+    "name": "陳Ｏ琪",
+    "nickname": "Flora AB"
 }, {
-    "Name": "張Ｏ吉",
-    "Nickname": "張宏吉"
+    "name": "張Ｏ吉",
+    "nickname": "張宏吉"
 }, {
-    "Name": "湯Ｏ益",
-    "Nickname": "John Mickey"
+    "name": "湯Ｏ益",
+    "nickname": "John Mickey"
 }, {
-    "Name": "楊Ｏ翰",
-    "Nickname": "楊翰翰"
+    "name": "楊Ｏ翰",
+    "nickname": "楊翰翰"
 }, {
-    "Name": "徐Ｏ昇",
-    "Nickname": "McGee Hsu"
+    "name": "徐Ｏ昇",
+    "nickname": "McGee Hsu"
 }, {
-    "Name": "李Ｏ騫",
-    "Nickname": "李佳騫"
+    "name": "李Ｏ騫",
+    "nickname": "李佳騫"
 }, {
-    "Name": "呂Ｏ儀",
-    "Nickname": "Serena Yi"
+    "name": "呂Ｏ儀",
+    "nickname": "Serena Yi"
 }, {
-    "Name": "洪Ｏ蓮",
-    "Nickname": "蓮兒"
+    "name": "洪Ｏ蓮",
+    "nickname": "蓮兒"
 }, {
-    "Name": "曾Ｏ維",
-    "Nickname": "曾紀維"
+    "name": "曾Ｏ維",
+    "nickname": "曾紀維"
 }, {
-    "Name": "黃Ｏ而",
-    "Nickname": "黃之而"
+    "name": "黃Ｏ而",
+    "nickname": "黃之而"
 }, {
-    "Name": "王Ｏ璽",
-    "Nickname": "王銘璽"
+    "name": "王Ｏ璽",
+    "nickname": "王銘璽"
 }, {
-    "Name": "郭Ｏ韻",
-    "Nickname": "郭詩韻"
+    "name": "郭Ｏ韻",
+    "nickname": "郭詩韻"
 }, {
-    "Name": "方Ｏ桂",
-    "Nickname": "方美桂"
+    "name": "方Ｏ桂",
+    "nickname": "方美桂"
 }, {
-    "Name": "莊Ｏ君",
-    "Nickname": "Schatten Chuang"
+    "name": "莊Ｏ君",
+    "nickname": "Schatten Chuang"
 }, {
-    "Name": "林Ｏ富",
-    "Nickname": "Danny"
+    "name": "林Ｏ富",
+    "nickname": "Danny"
 }, {
-    "Name": "胡Ｏ涴",
-    "Nickname": "黎雨"
+    "name": "胡Ｏ涴",
+    "nickname": "黎雨"
 }, {
-    "Name": "李Ｏ騫",
-    "Nickname": "李佳騫"
+    "name": "李Ｏ騫",
+    "nickname": "李佳騫"
 }, {
-    "Name": "呂Ｏ嫻",
-    "Nickname": "Leona Sian"
+    "name": "呂Ｏ嫻",
+    "nickname": "Leona Sian"
 }, {
-    "Name": "蔡Ｏ嬋",
-    "Nickname": "蔡嬋兒"
+    "name": "蔡Ｏ嬋",
+    "nickname": "蔡嬋兒"
 }, {
-    "Name": "施Ｏ豪",
-    "Nickname": "Elvin Shih"
+    "name": "施Ｏ豪",
+    "nickname": "Elvin Shih"
 }, {
-    "Name": "馮Ｏ翔",
-    "Nickname": "Vincent Feng"
+    "name": "馮Ｏ翔",
+    "nickname": "Vincent Feng"
 }, {
-    "Name": "楊Ｏ超",
-    "Nickname": "Victor Yang"
+    "name": "楊Ｏ超",
+    "nickname": "Victor Yang"
 }, {
-    "Name": "陳Ｏ春",
-    "Nickname": "Claire Chen"
+    "name": "陳Ｏ春",
+    "nickname": "Claire Chen"
 }, {
-    "Name": "周Ｏ良",
-    "Nickname": "周建良"
+    "name": "周Ｏ良",
+    "nickname": "周建良"
 }, {
-    "Name": "劉Ｏ龍",
-    "Nickname": "劉小龍"
+    "name": "劉Ｏ龍",
+    "nickname": "劉小龍"
 }, {
-    "Name": "蘇Ｏ珍",
-    "Nickname": "蘇慶珍"
+    "name": "蘇Ｏ珍",
+    "nickname": "蘇慶珍"
 }, {
-    "Name": "張Ｏ雲",
-    "Nickname": "Meiyun Chang"
+    "name": "張Ｏ雲",
+    "nickname": "Meiyun Chang"
 }, {
-    "Name": "陳Ｏ芳",
-    "Nickname": "飛翔"
+    "name": "陳Ｏ芳",
+    "nickname": "飛翔"
 }, {
-    "Name": "楊Ｏ玄",
-    "Nickname": "紫儀"
+    "name": "楊Ｏ玄",
+    "nickname": "紫儀"
 }, {
-    "Name": "陳Ｏ豪",
-    "Nickname": "陳 金豪"
+    "name": "陳Ｏ豪",
+    "nickname": "陳 金豪"
 }, {
-    "Name": "陳Ｏ妤",
-    "Nickname": "Pei Pei Chen"
+    "name": "陳Ｏ妤",
+    "nickname": "Pei Pei Chen"
 }, {
-    "Name": "黃Ｏ絜",
-    "Nickname": "黃湘絜"
+    "name": "黃Ｏ絜",
+    "nickname": "黃湘絜"
 }, {
-    "Name": "蔡Ｏ吟",
-    "Nickname": "小蔡"
+    "name": "蔡Ｏ吟",
+    "nickname": "小蔡"
 }, {
-    "Name": "劉ＯＯ",
-    "Nickname": "瓊華"
+    "name": "劉ＯＯ",
+    "nickname": "瓊華"
 }, {
-    "Name": "劉Ｏ伶",
-    "Nickname": "Carol Liu"
+    "name": "劉Ｏ伶",
+    "nickname": "Carol Liu"
 }, {
-    "Name": "楊Ｏ婷",
-    "Nickname": "Betty Yang"
+    "name": "楊Ｏ婷",
+    "nickname": "Betty Yang"
 }, {
-    "Name": "黃Ｏ儀",
-    "Nickname": "藍洋洋"
+    "name": "黃Ｏ儀",
+    "nickname": "藍洋洋"
 }, {
-    "Name": "陳Ｏ玉",
-    "Nickname": "Miya Chen"
+    "name": "陳Ｏ玉",
+    "nickname": "Miya Chen"
 }, {
-    "Name": "吳Ｏ玲",
-    "Nickname": "Anita Wu"
+    "name": "吳Ｏ玲",
+    "nickname": "Anita Wu"
 }, {
-    "Name": "陳Ｏ雄",
-    "Nickname": "陳文雄"
+    "name": "陳Ｏ雄",
+    "nickname": "陳文雄"
 }, {
-    "Name": "詹Ｏ穎",
-    "Nickname": "詹前穎"
+    "name": "詹Ｏ穎",
+    "nickname": "詹前穎"
 }, {
-    "Name": "陳Ｏ鈴",
-    "Nickname": "陳曉鈴"
+    "name": "陳Ｏ鈴",
+    "nickname": "陳曉鈴"
 }, {
-    "Name": "鍾Ｏ珊",
-    "Nickname": "鍾孟珊"
+    "name": "鍾Ｏ珊",
+    "nickname": "鍾孟珊"
 }, {
-    "Name": "蘇Ｏ珍",
-    "Nickname": "蘇慶珍"
+    "name": "蘇Ｏ珍",
+    "nickname": "蘇慶珍"
 }, {
-    "Name": "王Ｏ年",
-    "Nickname": "Chinien Wang"
+    "name": "王Ｏ年",
+    "nickname": "Chinien Wang"
 }, {
-    "Name": "吳Ｏ芸",
-    "Nickname": "吳季芸"
+    "name": "吳Ｏ芸",
+    "nickname": "吳季芸"
 }, {
-    "Name": "張Ｏ遠",
-    "Nickname": "張志遠"
+    "name": "張Ｏ遠",
+    "nickname": "張志遠"
 }, {
-    "Name": "周Ｏ伶",
-    "Nickname": "shadow chou"
+    "name": "周Ｏ伶",
+    "nickname": "shadow chou"
 }, {
-    "Name": "吳Ｏ如",
-    "Nickname": "Jing Ru Wu"
+    "name": "吳Ｏ如",
+    "nickname": "Jing Ru Wu"
 }, {
-    "Name": "蘇Ｏ安",
-    "Nickname": "泰安"
+    "name": "蘇Ｏ安",
+    "nickname": "泰安"
 }, {
-    "Name": "范Ｏ軒",
-    "Nickname": "小范"
+    "name": "范Ｏ軒",
+    "nickname": "小范"
 }, {
-    "Name": "簡Ｏ娥",
-    "Nickname": "月月"
+    "name": "簡Ｏ娥",
+    "nickname": "月月"
 }, {
-    "Name": "陳Ｏ芳",
-    "Nickname": "飛翔"
+    "name": "陳Ｏ芳",
+    "nickname": "飛翔"
 }, {
-    "Name": "費Ｏ平",
-    "Nickname": "Ping Fei"
+    "name": "費Ｏ平",
+    "nickname": "Ping Fei"
 }, {
-    "Name": "徐Ｏ君",
-    "Nickname": "Ginny Hsu"
+    "name": "徐Ｏ君",
+    "nickname": "Ginny Hsu"
 }, {
-    "Name": "洪ＯＯ",
-    "Nickname": "孟絹"
+    "name": "洪ＯＯ",
+    "nickname": "孟絹"
 }, {
-    "Name": "胡Ｏ勝",
-    "Nickname": "You-Sheng Hu"
+    "name": "胡Ｏ勝",
+    "nickname": "You-Sheng Hu"
 }, {
-    "Name": "張ＯＯ",
-    "Nickname": "允婕"
+    "name": "張ＯＯ",
+    "nickname": "允婕"
 }, {
-    "Name": "張Ｏ",
-    "Nickname": "張譯"
-}, {
-    "Name": "",
-    "Nickname": ""
-}, {
-    "Name": "",
-    "Nickname": ""
-}, {
-    "Name": "",
-    "Nickname": ""
-}, {
-    "Name": "",
-    "Nickname": ""
-}, {
-    "Name": "",
-    "Nickname": ""
+    "name": "張Ｏ",
+    "nickname": "張譯"
 }]
