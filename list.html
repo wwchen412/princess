@@ -241,7 +241,7 @@
                 <h2 class="text-center mb-4">得獎名單</h2>
                 <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
                 <ul style="list-style:none" id="awards-list">
-
+                    <li></li>
                 </ul>
             </div>
         </div>
@@ -281,7 +281,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open('get', 'https://wwchen412.github.io/princess/list.json', true)
         xhr.send(null);
-        var list_block = document.getElementById('award-name');
+        var list_block = document.getElementById('awards-list');
         list_block.innerHTML = '';
         xhr.onload = function() {
 
