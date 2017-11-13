@@ -249,16 +249,38 @@
         <div class="container">
             <div class="awards my-5">
                 <h2 class="text-center mb-4">得獎名單</h2>
+                <ul class="text-center">
+                    <li><a href="#list-block1">第1波得獎名單</a></li>
+                    <li><a href="#list-block2">第2波得獎名單</a></li>
+                    <li><a href="#list-block3">第3波得獎名單</a></li>
+                    <li><a href="#list-block4">第4波得獎名單</a></li>
+                </ul>
                 <div class="list-blocks-group">
-                    <div class="list-blocks">
+                    <!-- 11/13公主精美禮品 -->
+                    <div class="list-blocks" id="list-blocks1">
                         <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
                         <ul style="list-style:none" id="awards-list">
                             <li></li>
                         </ul>
                     </div>
-                    <div class="list-blocks">
+                    <!-- 11/20公主精美禮品 -->
+                    <div class="list-blocks" id="list-blocks2">
                         <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
                         <ul style="list-style:none" id="awards-list2">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <!-- 11/24 沖繩四日遊 -->
+                    <div class="list-blocks" id="list-blocks3">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                        <ul style="list-style:none" id="awards-list3">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <!-- 12/15 沖繩四日遊 -->
+                    <div class="list-blocks" id="list-blocks4">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                        <ul style="list-style:none" id="awards-list4">
                             <li></li>
                         </ul>
                     </div>
@@ -299,14 +321,13 @@
                 }, false);
             }, false);
         }());
-
+        // 第一波得獎
         var xhr = new XMLHttpRequest();
         xhr.open('get', 'https://wwchen412.github.io/princess/list.json', true)
         xhr.send(null);
         var list_block = document.getElementById('awards-list');
         list_block.innerHTML = '';
         xhr.onload = function() {
-
             var str = JSON.parse(xhr.responseText);
             var len = str.length
             for (i = 0; i < len; i++) {
@@ -317,6 +338,7 @@
 
         }
 
+        // 得獎標題json
         var qreg = new XMLHttpRequest();
         qreg.open('get', 'https://wwchen412.github.io/princess/title.json', true)
         qreg.send(null);
@@ -325,9 +347,7 @@
             var str = JSON.parse(qreg.responseText);
             var len = str.length
             for (i = 0; i < len; i++) {
-
                 list_title[i].textContent = str[i].name;
-
             }
             if (list_title[i].innerHTML == "") {
                 $(list_title[i]).css('display', 'none');
