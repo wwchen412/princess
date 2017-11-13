@@ -327,9 +327,10 @@
             for (i = 0; i < len; i++) {
 
                 list_title[i].textContent = str[i].name;
-                if (list_title[i].innerHTML == "") {
-                    $(list_title[i]).css('display', 'none');
-                }
+
+            }
+            if (list_title[i].innerHTML == "") {
+                $(list_title[i]).css('display', 'none');
             }
 
         }
