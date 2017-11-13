@@ -239,7 +239,7 @@
         <div class="container">
             <div class="awards my-5">
                 <h2 class="text-center mb-4">得獎名單</h2>
-                <h6 class="text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
+                <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
                 <ul style="list-style:none" id="awards-list">
                     <li>
                         <p>姓名：王X明</p>
@@ -372,6 +372,17 @@
                 list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
             }
 
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://wwchen412.github.io/princess/award-name.json', true)
+        xhr.send(null);
+        var AdName = document.querySelectorAll('.award-name');
+        xhr.onload = function() {
+            var str2 = JSON.parse(xhr.responseText);
+            var len2 = str2.length
+            for (i = 0; i < len2; i++) {
+                adName[i].textcontent = str[i].name;
+            }
         }
     </script>
 </body>
