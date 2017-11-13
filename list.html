@@ -373,17 +373,6 @@
             }
 
         }
-        var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://wwchen412.github.io/princess/award-name.json', true)
-        xhr.send(null);
-        var AdName = document.querySelectorAll('.award-name');
-        xhr.onload = function() {
-            var str2 = JSON.parse(xhr.responseText);
-            var len2 = str2.length
-            for (i = 0; i < len2; i++) {
-                adName[i].textcontent = str[i].name;
-            }
-        }
     </script>
 </body>
 
