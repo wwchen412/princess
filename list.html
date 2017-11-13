@@ -53,6 +53,12 @@
             border-radius: 10px;
         }
         
+        .list-blocks-group {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        
         #awards-list {
             padding: 0;
         }
@@ -74,6 +80,10 @@
         .awards li p span {
             color: #ccc;
             font-size: 1rem;
+        }
+        
+        .list-blocks {
+            width: 100%;
         }
         
         @media screen and (max-width:768px) {
@@ -239,11 +249,22 @@
         <div class="container">
             <div class="awards my-5">
                 <h2 class="text-center mb-4">得獎名單</h2>
-                <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
-                <ul style="list-style:none" id="awards-list">
-                    <li></li>
-                </ul>
-                <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                <div class="list-blocks-group">
+                    <div class="list-blocks">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
+                        <ul style="list-style:none" id="awards-list">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="list-blocks">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                        <ul style="list-style:none" id="awards-list2">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
@@ -299,15 +320,16 @@
         var qreg = new XMLHttpRequest();
         qreg.open('get', 'https://wwchen412.github.io/princess/title.json', true)
         qreg.send(null);
-        var list_title = document.querySelectorAll('award-name');
-
+        var list_title = document.querySelectorAll('.award-name');
         qreg.onload = function() {
-
             var str = JSON.parse(qreg.responseText);
             var len = str.length
             for (i = 0; i < len; i++) {
-                console.log(str[i].name);
-                list_title[i].textcontent = str[i].name;
+
+                list_title[i].textContent = str[i].name;
+                if (list_title[i].innerHTML == "") {
+                    $(list_title[i]).css('display', 'none');
+                }
             }
 
         }
