@@ -63,6 +63,11 @@
             display: inline-block;
             margin-right: 15px;
         }
+        
+        .awards li p span {
+            color: #ccc;
+            font-size: 1.3rem;
+        }
     </style>
 </head>
 
@@ -335,10 +340,8 @@
         var xhr = new XMLHttpRequest();
         xhr.open('get', 'https://wwchen412.github.io/princess/list.json', true)
         xhr.send(null);
-
         var list_block = document.getElementById('awards-list');
         list_block.innerHTML = '';
-
         xhr.onload = function() {
 
             var str = JSON.parse(xhr.responseText);
@@ -346,7 +349,7 @@
             for (i = 0; i < len; i++) {
                 var list = document.createElement('li');
                 list_block.appendChild(list);
-                list.textContent = str[i].name;
+                list.innerHTML = '<p>' + str[i].name + '<span>' + str[i].nickname + '</span></p>';
             }
 
         }
