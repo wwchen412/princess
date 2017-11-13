@@ -50,23 +50,42 @@
             width: 100%;
             padding: 20px;
             font-size: 0;
+            border-radius: 10px;
+        }
+        
+        #awards-list {
+            padding: 0;
         }
         
         .awards li {
             padding: 0px 10px;
             display: inline-block;
             font-size: 1rem;
+            width: calc(100% / 6);
+            vertical-align: top;
         }
         
         .awards li p {
             font-size: 1.5rem;
             display: inline-block;
-            margin-right: 15px;
+            line-height: 110%;
         }
         
         .awards li p span {
             color: #ccc;
-            font-size: 1.3rem;
+            font-size: 1rem;
+        }
+        
+        @media screen and (max-width:768px) {
+            .awards li {
+                width: calc(100% / 3);
+            }
+        }
+        
+        @media screen and (max-width:576px) {
+            .awards li {
+                width: calc(100% / 2);
+            }
         }
     </style>
 </head>
@@ -177,9 +196,9 @@
                                                 </a>
 
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item text-primary btn-sm book-now-js" href="#">盛世公主．打卡趣</a>
+                                <a class="dropdown-item text-primary btn-sm book-now-js" href="index.html##navtoggle">盛世公主．打卡趣</a>
                                 <a class="dropdown-item text-primary btn-sm" href="#">公主時刻．遊你夢想</a>
-                                <a class="dropdown-item text-primary btn-sm" href="#">得獎公告</a>
+                                <a class="dropdown-item text-primary btn-sm" href="list.html">得獎公告</a>
                             </div>
                         </div>
                     </li>
@@ -220,6 +239,7 @@
         <div class="container">
             <div class="awards my-5">
                 <h2 class="text-center mb-4">得獎名單</h2>
+                <h6 class="text-center mb-4  p-2 awards-name" style="background:#ddd;">公主紀念禮組</h6>
                 <ul style="list-style:none" id="awards-list">
                     <li>
                         <p>姓名：王X明</p>
@@ -349,7 +369,7 @@
             for (i = 0; i < len; i++) {
                 var list = document.createElement('li');
                 list_block.appendChild(list);
-                list.innerHTML = '<p>' + str[i].name + '<span>' + str[i].nickname + '</span></p>';
+                list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
             }
 
         }
