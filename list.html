@@ -306,7 +306,8 @@
             var str = JSON.parse(qreg.responseText);
             var len = str.length
             for (i = 0; i < len; i++) {
-                list_title[i].textContent = str[i].name;
+                console.log(str[i].name);
+                list_title[i].textcontent = str[i].name;
             }
 
         }
