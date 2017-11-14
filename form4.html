@@ -208,7 +208,7 @@
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
                                 <span aria-hidden="true" style="">×</span>
                               </button>
-                    <form class="container" id="needs-validation" novalidate action="share4.html">
+                    <form class="container" id="needs-validation" novalidate action="">
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="text-primary text-center">請填寫領獎聯絡方式</h3>
@@ -238,7 +238,7 @@
 
                         </div>
 
-                        <button class="btn btn-primary mx-auto d-block px-5" type="submit">繼續</button>
+                        <button class="btn btn-primary mx-auto d-block px-5" type="button" id="submitButton">繼續</button>
 
                     </form>
 
@@ -253,19 +253,24 @@
 
     <script>
         function SendForm() {
+
             $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
                 "name": document.getElementById("validationCustom01").value,
                 "ni_name": document.getElementById("validationCustom02").value,
                 "phone": document.getElementById("validationCustom03").value,
                 "email": document.getElementById("validationCustom04").value
+            }).done(function() {
+                window.location.href = "share4.html";
             });
+
         }
 
         (function() {
             "use strict";
             window.addEventListener("load", function() {
                 var form = document.getElementById("needs-validation");
-                form.addEventListener("submit", function(event) {
+                var submitButton = document.getElementById("submitButton");
+                submitButton.addEventListener("click", function(event) {
                     if (form.checkValidity() == false) {
                         event.preventDefault();
                         event.stopPropagation();
