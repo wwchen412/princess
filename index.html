@@ -221,9 +221,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class=" col-12 href-slider  pb-5" style="background:#00b2e0;">
-
+                    <!-- 
                     <div class="swiper-container">
-                        <div class="list-unstyled text-white d-none  select-share text-center swiper-wrapper">
+                        <div class="list-unstyled text-white select-share text-center swiper-wrapper">
                             <div class="text-center swiper-slide">
                                 <a href="#1" class="text-light hoverChange" data-toggle="modal" data-target="#exampleModalLong" data-imglink="img/spot1.jpg" data-title="海上天空步道" data-p="高懸海平面39米、長達8.5米的全透明玻璃步道，漫步其中，如同懸浮於碧海藍天之間，飽覽令人驚歎的美景之餘，充分洗滌身心，打卡熱點NO.1。
                                 
@@ -275,8 +275,25 @@
                         </div>
                         <div class="swiper-button-prev swiper-button-disabled"></div>
                         <div class="swiper-button-next"></div>
-                    </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 mb-2">
+                            <a href="" data-toggle="modal" data-target="#exampleModalLong" data-title="閨蜜相邀出遊去‧公主體驗" data-p="旅行就要打卡炫耀！最新的盛世公主號，多項遊輪首創設施，讓你登船記憶卡殺不完，讓好友都羨慕呆了。" data-imglink="https://www.youtube.com/embed/nHuuC910zys" data-link="form1.html">
+                                <img src="img/movie1.png" alt="" class="img-fluid rounded">
+                            </a>
 
+                        </div>
+                        <div class="col-sm-4 col-xs-12 mb-2">
+                            <a href="" data-toggle="modal" data-target="#exampleModalLong" data-title="親子時間最珍貴‧公主體驗" data-p="親子旅遊首選公主遊輪，多樣的異國風情、貼心的孩童節目、精彩的歌舞秀表演，加上行李不限重，全家出遊最貼心。" data-imglink="https://www.youtube.com/embed/E8Shi63NZqo" data-link="form1.html">
+                                <img src="img/movie2.png" alt="" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 mb-2">
+                            <a href="" data-toggle="modal" data-target="#exampleModalLong" data-title="閨蜜相邀出遊去‧公主體驗" data-p="旅行就是從頭到尾都在享受，享用頂級美食，品嚐米其林星廚設計晚宴菜單，不用再舟車勞頓，慢慢品味”旅行”。" data-imglink="https://www.youtube.com/embed/TjiiUrrEiP8" data-link="form1.html">
+                                <img src="img/movie3.png" alt="" class="img-fluid rounded">
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -348,7 +365,7 @@
                     <img src="img/active1.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 text-center">
-                    <a href="#navtoggle" class="btn d-inline-block mx-auto bg-primary text-light my-3 px-5  book-now-js">立即前往</a>
+                    <a href="#navtoggle" class="btn d-inline-block mx-auto bg-secondary text-light my-3 px-5 disabled" disable>活動結束</a>
                 </div>
             </div>
             <!-- 活動二 -->
@@ -431,7 +448,7 @@
     </footer>
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" role="document" style="max-width:1170px;">
             <div class="modal-content">
                 <div class="modal-header  bg-primary text-light">
                     <h5 class="modal-title" id="exampleModalLongTitle"></h5>
@@ -440,7 +457,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="" alt="" class="img-fluid rounded modal-imglink">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item modal-iframe" src="https://www.youtube.com/embed/nHuuC910zys" allowfullscreen></iframe>
+                    </div>
                     <p style="line-height:200%;font-size:.8rem;" class="modal-p">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
                         <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
                     </p>
@@ -473,8 +492,7 @@
             modal.find('.modal-title').text(modal_title);
             modal.find('.modal-p').text(modal_p);
             modal.find('.modal-link').attr('href', modal_link);
-            modal.find('.modal-imglink').attr('src', modal_imglink);
-
+            modal.find('.modal-iframe').attr('src', modal_imglink);
         })
     </script>
     <script async src="//rec.scupio.com/recweb/js/rec.js"></script>
