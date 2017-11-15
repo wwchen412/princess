@@ -402,7 +402,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item modal-iframe" src="https://www.youtube.com/embed/nHuuC910zys&showinfo=0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item modal-iframe" src="https://www.youtube.com/embed/nHuuC910zys?rel=0&autoplay=1&showinfo=0" allowfullscreen></iframe>
                     </div>
                     <p style="line-height:200%;font-size:1rem;" class="modal-p my-3">獨具特色的廊橋延伸至船舷之外 28英呎，是盛事公主號首創的創意設施。<br> 四周透明的玻璃牆讓您盡賞壯美的海洋風光。
                         <br> 每當夜幕降臨，華燈初上，這裡又化身為提供您散步的浪漫廊橋
@@ -422,6 +422,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).on('load', function() {
+            $('#exampleModalLong').modal('show');
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- 讀取modal 內容 -->
     <script src="js/all.js"></script>
