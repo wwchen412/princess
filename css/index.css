@@ -448,6 +448,10 @@ a.text-primary:hover {
 
 /* modal */
 
+.modal-title {
+    font-size: 1.5rem;
+}
+
 .modal-content {
     border: 0;
 }
@@ -530,7 +534,7 @@ a.text-primary:hover {
     .modal-link {
         max-width: 150px;
     }
-    .btn img{
+    .btn img {
         height: 15px;
     }
 }
