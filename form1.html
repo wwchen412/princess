@@ -286,7 +286,7 @@
             window.addEventListener("load", function() {
                 var form = document.getElementById("needs-validation");
                 var submitButton = document.getElementById("submitButton");
-                submitButton.addEventListener("click", function(event) {
+                submitButton.one("click", function(event) {
                     if (form.checkValidity() == false) {
                         event.preventDefault();
                         event.stopPropagation();
