@@ -272,8 +272,6 @@
                 "email": document.getElementById("validationCustom04").value,
 
             }).done(function() {
-                event.preventDefault();
-                event.stopPropagation();
                 setTimeout(function() {
                     window.location.href = "share1.html"
                 }, 1000);
@@ -286,7 +284,7 @@
             window.addEventListener("load", function() {
                 var form = document.getElementById("needs-validation");
                 var submitButton = document.getElementById("submitButton");
-                submitButton.one("click", function(event) {
+                submitButton.addEventListener("click", function(event) {
                     if (form.checkValidity() == false) {
                         event.preventDefault();
                         event.stopPropagation();
