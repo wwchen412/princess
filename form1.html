@@ -205,7 +205,7 @@
             </fb:login-button>
         </div>
         <!-- form -->
-        <div class="form-area rounded border d-none">
+        <div class="form-area rounded border">
             <div class="container">
                 <div class="row">
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
@@ -272,6 +272,8 @@
                 "email": document.getElementById("validationCustom04").value,
 
             }).done(function() {
+                event.preventDefault();
+                event.stopPropagation();
                 setTimeout(function() {
                     window.location.href = "share1.html"
                 }, 1000);
