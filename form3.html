@@ -44,6 +44,7 @@
         });
     </script>
     <script async src="//rec.scupio.com/recweb/js/rec.js"></script>
+
 </head>
 
 <body class="hidden-load">
@@ -254,14 +255,23 @@
 
     <script>
         function SendForm() {
-
+            (scupioconv = window.scupioconv || []).push({
+                bwp: 1160,
+                bwpid: 'action'
+            });
+            (window._bwtm = window._bwtm || []).push({
+                "mid": 249,
+                "pid": "action"
+            });
             $.get("https://script.google.com/macros/s/AKfycbynmO6k5v7uBHaicdxcGgjxWzIvadgYqeEvpi9QejjDM-MbhYYw/exec", {
                 "name": document.getElementById("validationCustom01").value,
                 "ni_name": document.getElementById("validationCustom02").value,
                 "phone": document.getElementById("validationCustom03").value,
                 "email": document.getElementById("validationCustom04").value
             }).done(function() {
-                window.location.href = "share3.html";
+                setTimeout(function() {
+                    window.location.href = "index.php"
+                }, 1000);
             });
 
         }

@@ -28,27 +28,9 @@
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/all.js"></script>
-
-    <script>
-        (scupioconv = window.scupioconv || []).push({
-            bwp: 1160,
-            bwpid: 'buy'
-        });
-    </script>
-    <script async src="//img.scupio.com/js/conv.js"></script>
-
-    <script>
-        (window._bwtm = window._bwtm || []).push({
-            "mid": 249,
-            "convid": "engage_2",
-            "bitem": [{
-                "itemid": 1,
-                "price": 1,
-                "count": 1
-            }]
-        });
-    </script>
+    <!-- 追蹤碼 -->
     <script async src="//rec.scupio.com/recweb/js/rec.js"></script>
+    <script async src="//img.scupio.com/js/conv.js"></script>
 
     <style>
         #wrap {
@@ -306,6 +288,20 @@
 
     <script>
         document.getElementById('shareBtn').onclick = function() {
+            (scupioconv = window.scupioconv || []).push({
+                bwp: 1160,
+                bwpid: 'buy'
+            });
+            (window._bwtm = window._bwtm || []).push({
+                "mid": 249,
+                "convid": "engage_3",
+                "bitem": [{
+                    "itemid": 1,
+                    "price": 1,
+                    "count": 1
+                }]
+            });
+
             FB.ui({
                 method: 'share',
                 display: 'popup',
