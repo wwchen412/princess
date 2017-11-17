@@ -270,7 +270,7 @@
                 "email": document.getElementById("validationCustom04").value
             }).done(function() {
                 setTimeout(function() {
-                    window.location.href = "index.php"
+                    window.location.href = "share2.html"
                 }, 1000);
             });
 
@@ -286,7 +286,7 @@
                         event.preventDefault();
                         event.stopPropagation();
                     } else {
-                        submitButton.setAttribute('disalbe', 'disable');
+                        submitButton.setAttribute('disalbed', 'disabled');
                         SendForm();
                     }
                     form.classList.add("was-validated");

@@ -54,7 +54,8 @@
         }
         
         .block {
-            max-width: 400px;
+            max-width: 1170px;
+            width: 100%;
             background-color: #fff;
             padding: 20px;
             align-self: center;
@@ -91,11 +92,14 @@
             #wrap {
                 position: relative;
                 min-height: 100vh;
+                -ms-overflow-y: auto;
+                overflow-y: auto;
             }
             .block {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%) translateX(-50%);
+                margin: 10% auto;
             }
             .form-area {
                 position: absolute;
@@ -264,20 +268,21 @@
     </header>
     <div id="wrap" class="ieonly-overflow">
         <div class="block rounded mx-2">
-            <h3 class="mb-3 text-primary">分享活動打卡</h3>
-            <!-- <h6>Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
-            <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6>
+            <h3 class="mb-3 text-primary">親子時間最珍貴‧公主體驗</h3>
+            <!-- <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
             <hr>
-            <img src="img/spot.jpg" alt="" class="img-fluid mb-3">
-            <div class="text-left" style="font-weight:100;">
-                <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 聲光水影秀</p>
-                <p style="font-size:.9rem;letter-spacing:1px;">每晚於星空露天電影院節目空檔，以不同主題音樂搭配燈光水舞噴泉，高達10米的燈光噴泉帶來不僅是華麗水舞，震撼眼球，更是獨特的浪漫記憶。</p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item modal-iframe" src="https://www.youtube.com/embed/E8Shi63NZqo?rel=0&showinfo=0" allowfullscreen></iframe>
+            </div>
+            <div class="text-left mt-3" style="font-weight:100;">
+                <!-- <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 【海上天空步道】</p> -->
+                <p style="font-size:1rem;letter-spacing:1px;">親子旅遊首選公主遊輪，多樣的異國風情、貼心的孩童節目、精彩的歌舞秀表演，加上行李不限重，全家出遊最貼心。亞洲最佳遊輪─盛世公主號，擁有世界一流的拉斯維加斯─奇幻歌舞秀表演，對孩童更提供大人放心、小孩貼心的多項兒童節目，讓全家人共度珍貴的時光。</p>
             </div>
             <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="goIndex()"> 
-                    <span aria-hidden="true" >×</span>
+                    <span aria-hidden="true" style="">×</span>
                   </button>
             <!-- <button class="btn btn-outline-secondary mb-2" onclick="goIndex()" style="opacity:.3;">重新開始</button> -->
-            <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
+            <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">立即分享</button>
 
         </div>
 

@@ -55,7 +55,8 @@
         }
         
         .block {
-            max-width: 400px;
+            max-width: 1170px;
+            width: 100%;
             background-color: #fff;
             padding: 20px;
             align-self: center;
@@ -92,11 +93,14 @@
             #wrap {
                 position: relative;
                 min-height: 100vh;
+                -ms-overflow-y: auto;
+                overflow-y: auto;
             }
             .block {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%) translateX(-50%);
+                margin: 10% auto;
             }
             .form-area {
                 position: absolute;
@@ -262,20 +266,21 @@
     </header>
     <div id="wrap" class="ieonly-overflow">
         <div class="block rounded mx-2">
-            <h3 class="mb-3 text-primary">分享活動打卡</h3>
-            <!-- <h6>Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
-            <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6>
+            <h3 class="mb-3 text-primary">人生就該享受放鬆‧公主體驗</h3>
+            <!-- <h6 class="text-left" style="color:#666;font-weight:300;font-size:.9rem;letter-spacing:1px;line-height:150%;">Tag一位朋友並寫下為什麼想在這裡打卡分享，公開分享至個人Facebook塗鴉牆，就有機會抽到盛世公主號沖繩４日遊。</h6> -->
             <hr>
-            <img src="img/spot2.jpg" alt="" class="img-fluid mb-3">
-            <div class="text-left" style="font-weight:100;">
-                <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 星空露天電影院</p>
-                <p style="font-size:.9rem;letter-spacing:1px;">露天甲板上高聳的高清巨型螢頻，享受公主遊輪首創海上星空露天電影院，在舒適躺臥在池畔旁，一面欣賞熱門電影的震撼視聽享受，一面品嚐新鮮出爐的爆米花，是海上最令人難忘的經典設施。</p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item modal-iframe" src="https://www.youtube.com/embed/TjiiUrrEiP8?rel=0&showinfo=0" allowfullscreen></iframe>
+            </div>
+            <div class="text-left mt-3" style="font-weight:100;">
+                <!-- <p style="font-weight:400;letter-spacing:3px;" class="mb-1"> 【海上天空步道】</p> -->
+                <p style="font-size:1rem;letter-spacing:1px;">旅行就是從頭到尾都在享受，享用頂級美食，品嚐米其林星廚設計晚宴菜單，不用再舟車勞頓，慢慢品味”旅行”。 盛世公主號擁有各種公主遊輪獨家或經典之特色設施，也是唯一同時由兩位米其林星級主廚擔綱晚餐菜單設計的遊輪，邀您一同來體驗。</p>
             </div>
             <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="goIndex()"> 
-                    <span aria-hidden="true" >×</span>
+                    <span aria-hidden="true" style="">×</span>
                   </button>
             <!-- <button class="btn btn-outline-secondary mb-2" onclick="goIndex()" style="opacity:.3;">重新開始</button> -->
-            <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">打卡趣</button>
+            <button id="shareBtn" class="btn btn-primary mb-2 px-5"><img src="img/locat-icon.svg" alt="" style="width:15px;margin-right:10px;">立即分享</button>
 
         </div>
 
