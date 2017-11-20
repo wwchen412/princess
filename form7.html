@@ -203,7 +203,7 @@
             </fb:login-button>
         </div>
         <!-- form -->
-        <div class="form-area rounded border d-none">
+        <div class="form-area rounded border d-block">
             <div class="container">
                 <div class="row">
                     <button type="button" class="close close-back" data-dismiss="modal" aria-label="Close" style="position:absolute;right:5px;top:5px;" onclick="history.back()"> 
@@ -236,6 +236,11 @@
                                 <input type="email" class="form-control" id="validationCustom04" placeholder="Email" required>
 
                             </div>
+                            <div class="col-md-12 mb-3" style="visibility:hidden">
+                                <label for="validationCustom05">E-Mail</label>
+                                <input type="text" class="form-control" id="validationCustom05" placeholder="影片1" value="影片1">
+
+                            </div>
 
                         </div>
 
@@ -259,7 +264,8 @@
                 "name": document.getElementById("validationCustom01").value,
                 "ni_name": document.getElementById("validationCustom02").value,
                 "phone": document.getElementById("validationCustom03").value,
-                "email": document.getElementById("validationCustom04").value
+                "email": document.getElementById("validationCustom04").value,
+                "num": document.getElementById("validationCustom05").value
             }).done(function() {
                 window.location.href = "share7.html";
             });
