@@ -237,6 +237,11 @@
                                 <input type="email" class="form-control" id="validationCustom04" placeholder="Email" required>
 
                             </div>
+                            <div class="col-md-12 mb-3 d-none">
+                                <label for="validationCustom05">movie</label>
+                                <input type="text" class="form-control" id="validationCustom05" value="影片3">
+
+                            </div>
 
                         </div>
 
@@ -267,7 +272,8 @@
                 "name": document.getElementById("validationCustom01").value,
                 "ni_name": document.getElementById("validationCustom02").value,
                 "phone": document.getElementById("validationCustom03").value,
-                "email": document.getElementById("validationCustom04").value
+                "email": document.getElementById("validationCustom04").value,
+                "movie": document.getElementById("validationCustom05").value
             }).done(function() {
                 setTimeout(function() {
                     window.location.href = "share3.html"
