@@ -358,7 +358,7 @@
 
         // 得獎標題json
         var qreg = new XMLHttpRequest();
-        qreg.open('get', 'https://wwchen412.github.io/princess/title.json', true)
+        qreg.open('get', 'http://princesscruises.com.tw/event/mj/title.json', true)
         qreg.send(null);
         var list_title = document.querySelectorAll('.award-name');
         qreg.onload = function() {
@@ -375,7 +375,7 @@
 
         // 第2波得獎
         var xhrSecond = new XMLHttpRequest();
-        xhrSecond.open('get', 'https://wwchen412.github.io/princess/list2.json', true)
+        xhrSecond.open('get', 'http://princesscruises.com.tw/event/mj/list2.json', true)
         xhrSecond.send(null);
         var list_block2 = document.getElementById('awards-list2');
         list_block2.innerHTML = '';
