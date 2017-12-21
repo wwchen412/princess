@@ -272,6 +272,8 @@
                     <li><a href="#list-blocks2">公主紀念禮組 第二波得獎名單</a></li>
                     <li><a href="#list-blocks3">盛世公主號4天沖繩自主遊_內艙</a></li>
                     <li><a href="#list-blocks4">盛世公主號4天沖繩自主遊_內艙</a></li>
+                    <li><a href="#list-blocks4">第一波加碼贈送得獎名單</a></li>
+                    <li><a href="#list-blocks4">第二波加碼贈送得獎名單</a></li>
                 </ul>
                 <div class="list-blocks-group">
                     <!-- 11/13公主精美禮品 -->
@@ -301,9 +303,21 @@
                     <div class="list-blocks" id="list-blocks4">
                         <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
                         <ul style="list-style:none" id="awards-list4">
-                            <li>
-                                <p>12/15抽出<br><span>沖繩四天三夜</span></p>
-                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 第一波補抽 -->
+                    <div class="list-blocks" id="list-blocks5">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                        <ul style="list-style:none" id="awards-list5">
+
+                        </ul>
+                    </div>
+                    <!-- 第一波補抽 -->
+                    <div class="list-blocks" id="list-blocks6">
+                        <h6 class="award-name text-center mb-4  p-2 awards-name" style="background:#ddd;"></h6>
+                        <ul style="list-style:none" id="awards-list6">
+
                         </ul>
                     </div>
                 </div>
@@ -393,39 +407,39 @@
                 }
 
             }
-            // 第三波得獎
-            // var xhrThird = new XMLHttpRequest();
-            // xhrThird.open('get', 'https://wwchen412.github.io/princess/list3.json', true)
-            // xhrThird.send(null);
-            // var list_block3 = document.getElementById('awards-list3');
-            // list_block3.innerHTML = '';
-            // xhrThird.onload = function() {
-            //     var str = JSON.parse(xhrThird.responseText);
-            //     var len = str.length
-            //     for (i = 0; i < len; i++) {
-            //         var list = document.createElement('li');
-            //         list_block3.appendChild(list);
-            //         list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
-            //     }
+            // 補獎1
+        var xhrThird = new XMLHttpRequest();
+        xhrThird.open('get', 'https://wwchen412.github.io/princess/list3.json', true)
+        xhrThird.send(null);
+        var list_block3 = document.getElementById('awards-list5');
+        list_block3.innerHTML = '';
+        xhrThird.onload = function() {
+            var str = JSON.parse(xhrThird.responseText);
+            var len = str.length
+            for (i = 0; i < len; i++) {
+                var list = document.createElement('li');
+                list_block3.appendChild(list);
+                list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
+            }
 
-        // }
+        }
 
         // 第四波得獎
-        // var xhrFour = new XMLHttpRequest();
-        // xhrFour.open('get', 'https://wwchen412.github.io/princess/list4.json', true)
-        // xhrFour.send(null);
-        // var list_block4 = document.getElementById('awards-list4');
-        // list_block4.innerHTML = '';
-        // xhrFour.onload = function() {
-        //     var str = JSON.parse(xhrFour.responseText);
-        //     var len = str.length
-        //     for (i = 0; i < len; i++) {
-        //         var list = document.createElement('li');
-        //         list_block4.appendChild(list);
-        //         list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
-        //     }
+        var xhrFour = new XMLHttpRequest();
+        xhrFour.open('get', 'https://wwchen412.github.io/princess/list4.json', true)
+        xhrFour.send(null);
+        var list_block4 = document.getElementById('awards-list6');
+        list_block4.innerHTML = '';
+        xhrFour.onload = function() {
+            var str = JSON.parse(xhrFour.responseText);
+            var len = str.length
+            for (i = 0; i < len; i++) {
+                var list = document.createElement('li');
+                list_block4.appendChild(list);
+                list.innerHTML = '<p>' + str[i].name + '<br><span>' + str[i].nickname + '</span></p>';
+            }
 
-        // }
+        }
     </script>
 </body>
 
